@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>9ja cinema grill</title>
-    <link rel="stylesheet" href="./css/thecube.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,13 +13,14 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="shortcut icon" href="./img/cinemalogo.jpeg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="./img/cinemalogo.jpeg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-</head>
 
+</head>
 <style>
     body {
         background: #0f0f0f;
@@ -116,16 +117,16 @@
 
     .footer-input {
         height: 44px;
-        background: #050505;
+        background: #050505 !important;
         border: 1px solid #3b3b3b;
         border-radius: 6px;
-        color: #fff;
+        color: #fff !important;
         padding: 0 16px;
         box-shadow: none !important;
     }
 
     .footer-input::placeholder {
-        color: #b7b7b7;
+        color: #b7b7b7 !important;
     }
 
     .footer-input:focus {
@@ -198,7 +199,7 @@
     }
 
     /* Footer links */
-    .footer-links {
+    .footer-link {
         list-style: none;
         padding: 0;
         margin: 0;
@@ -243,11 +244,11 @@
         margin-top: 20px;
     }
 
-    .footer-links li {
+    .footer-link li {
         margin-bottom: 14px;
     }
 
-    .footer-links a {
+    .footer-link a {
         color: #ffffff;
         text-decoration: none;
         font-size: 16px;
@@ -255,7 +256,7 @@
         transition: color 0.25s ease;
     }
 
-    .footer-links a:hover {
+    .footer-link a:hover {
         color: rgb(16, 241, 16);
     }
 
@@ -317,9 +318,89 @@
             padding: 16px 18px;
         }
     }
+
+    .now-showing-section {
+  background: #111111;
+}
+
+.now-showing-title {
+  color: #ffffff;
+  font-size: 5rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-left: 9px;
+  padding: 16px;
+}
+
+.movie-card {
+  width: 100%;
+  height: 290px;          /* same height for every card */
+  border-radius: 12px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.movie-poster {
+  width: 100%;
+  height: 100%;           /* fill the card */
+  object-fit: cover;      /* all flyers look equal */
+  display: block;
+  border-radius: 12px;
+}
+
+/* Tablet */
+@media (max-width: 991.98px) {
+  .now-showing-title {
+    font-size: 2.5rem;
+  }
+
+  .movie-card {
+    height: 320px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+  .now-showing-title {
+    font-size: 2rem;
+  }
+
+  .movie-card {
+    height: 260px;
+  }
+}
 </style>
 
 <body>
+    <!-- <nav>
+        <a class="logo" href="#"><img src="./img/logo cinema grill.png" alt=""></a>
+        <div class="nav-bar">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Buy-Ticket</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">Food & Drinks</a></li>
+            <li><a href="#">Profile</a></li>
+        </div>
+    </nav> -->
+    <!-- 
+    <nav class="navbar">
+        <a class="logo" href="#"><img src="./img/logo cinema grill.png" alt=""></a>
+        <button class="menu-toggle" id="menuToggle">
+            ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#">Home</a></li>
+            <li class="nav-links">
+                <a class="nav-links" href="#" data-bs-toggle="modal" data-bs-target="#ticketModal">
+                    Buy Ticket
+                </a>
+            </li>
+            <li><a href="#">The Cube</a></li> -->
+    <!-- <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li> -->
+    <!-- </ul>
+    </nav> -->
 
 
     <nav class="navbar">
@@ -332,7 +413,7 @@
         </button>
 
         <ul class="nav-links" id="navLinks">
-            <li><a href="/dashboard.html">Home</a></li>
+            <li><a href="./dashboard.html">Home</a></li>
             <li>
                 <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal">
                     Buy Ticket
@@ -342,36 +423,133 @@
         </ul>
     </nav>
 
+    <div class="location-search">
+        <select id="location">
+            <option disabled selected>Select Location</option>
+            <option value="Uyo">Eket-HQ</option>
+            <option value="Lagos">Uyo-comming soon</option>
+            <option value="Abuja">Ikot Ekpene-comming soon</option>
+            <option value="Port Harcourt">lekki-comming soon</option>
+            <option value="Port Harcourt">Auchi-comming soon</option>
+            <option value="Port Harcourt">Benin-comming soon</option>
+            <option value="Port Harcourt">Warri-comming soon</option>
+            <option value="Port Harcourt">Ikeja-comming soon</option>
+            <option value="Port Harcourt">Festac town-comming soon</option>
+            <option value="Port Harcourt">Asaba-comming soon</option>
+            <option value="Port Harcourt">Surulere-comming-soon</option>
+            <option value="Port Harcourt">Calaber-comming soon</option>
+            <option value="Port Harcourt">Abuja-comming soon</option>
+            <option value="Port Harcourt">PH-city-comming soon</option>
+            <option value="Port Harcourt">Enugu-comming soon</option>
 
-    <section class="cinema-gallery">
 
-        <h2 class="gallery-title">🎬 9ja Cinemas grill</h2>
 
-        <!-- Section 1 -->
-        <div class="gallery-section">
-            <h3>Movie Experience</h3>
 
-            <div class="gallery-grid">
-                <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba" alt="Cinema Hall">
-                <img src="https://images.unsplash.com/photo-1505686994434-e3cc5abf1330" alt="Cinema Seats">
-                <img src="https://images.unsplash.com/photo-1524985069026-dd778a71c7b4" alt="Movie Screen">
-                <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c" alt="Cinema Lights">
+
+        </select>
+
+        <button onclick="searchLocation()">Search</button>
+    </div>
+
+    <p id="result"></p>
+
+
+    <section class="video-carousel">
+
+        <div class="carousel">
+
+            <!-- Slide 1 -->
+            <div class="slide active">
+                <video autoplay muted loop playsinline>
+                    <source src="./videos/movie advert.mp4" type="video/mp4">
+                </video>
+
+                <div class="content">
+                    <h1>Ride or Die</h1>
+                    <p>Trailer</p>
+                    <a href="#">BUY TICKET</a>
+                </div>
             </div>
-        </div>
 
-        <!-- Section 2 -->
-        <div class="gallery-section">
-            <h3>Food & Lounge</h3>
+            <!-- Slide 2 -->
+            <div class="slide">
+                <video autoplay muted loop playsinline>
+                    <source src="./videos/advertvideotwo.mp4" type="video/mp4">
+                </video>
 
-            <div class="gallery-grid">
-                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591" alt="Popcorn">
-                <img src="https://images.unsplash.com/photo-1529563021893-cc83c992d75d" alt="Cinema Snacks">
-                <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b" alt="Lounge Seating">
-                <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Food Counter">
+                <div class="content">
+                    <h1>Kinemaster</h1>
+                    <p>Cinematic Trailer</p>
+                    <a href="#">BUY TICKET</a>
+                </div>
             </div>
-        </div>
 
+            <!-- Slide 3 -->
+            <div class="slide">
+                <video autoplay muted loop playsinline>
+                    <source src="./videos/advertvideothree.mp4" type="video/mp4">
+                </video>
+
+                <div class="content">
+                    <h1>Smile</h1>
+                    <p>Official Trailer</p>
+                    <a href="#">BUY TICKET</a>
+                </div>
+            </div>
+
+            <!-- Buttons -->
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+
+        </div>
     </section>
+
+
+    <section class="now-showing-section py-5">
+        <div class="container-fluid px-lg-4 px-3">
+            <h2 class="now-showing-title mb-4">Now Showing</h2>
+
+            <div class="row g-3 g-lg-4 now-showing-row">
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="movie-card">
+                        <img src="https://img.magnific.com/premium-photo/female-with-scary-make-up-halloween-night-studio_224078-65.jpg?uid=R198485935&ga=GA1.1.283162996.1779704854&semt=ais_hybrid&w=740&q=80" alt="halloween" class="img-fluid movie-poster">
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="movie-card">
+                        <img src="./img/movie cover ten.jpg" alt="Deep Water" class="img-fluid movie-poster">
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="movie-card">
+                        <img src="./img/movie cover four.jpg" alt="Animal Farm" class="img-fluid movie-poster">
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="movie-card">
+                        <img src="https://img.magnific.com/free-photo/close-up-zombie-sitting-cinema-theater_23-2150838847.jpg?uid=R198485935&ga=GA1.1.283162996.1779704854&semt=ais_hybrid&w=740&q=80" alt="Efunroye" class="img-fluid movie-poster">
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="movie-card">
+                        <img src="./img/movie cover three.jpg" alt="Iwewa" class="img-fluid movie-poster">
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="movie-card">
+                        <img src="./img/movie cover six.jpg" alt="Movie Poster" class="img-fluid movie-poster">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
 
 
@@ -556,6 +734,7 @@
 
 
 
+
     <footer class="cinema-footer">
         <div class="container-fluid px-lg-5 px-4">
             <div class="row g-4 align-items-start">
@@ -600,7 +779,7 @@
                                 <input type="email" class="form-control footer-input" placeholder="Email Address">
                             </div>
                             <div class="col-md-4">
-                                <button type="submit" class="btn footer-submit w-100">Submit</button>
+                                <button type="submit" class="btns footer-submit w-100">Submit</button>
                             </div>
                         </div>
                     </form>
@@ -624,7 +803,7 @@
                 <div class="col-lg-3 col-md-4 footer-links-wrap">
                     <div class="row">
                         <div class="col-6">
-                            <ul class="footer-links">
+                            <ul class="footer-link">
                                 <li><a href="#">About us</a></li>
                                 <li><a href="#">Ticket Prices</a></li>
                                 <li><a href="#">Experiences</a></li>
@@ -634,7 +813,7 @@
                         </div>
 
                         <div class="col-6">
-                            <ul class="footer-links">
+                            <ul class="footer-link">
                                 <li><a href="#">Contact us</a></li>
                                 <li><a href="#">FAQ</a></li>
                                 <li><a href="#">Privacy policy</a></li>
@@ -658,8 +837,15 @@
 
 
 
+    <!-- 
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
 
-
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script> -->
 
     <script>
         const menuToggle = document.getElementById("menuToggle");
@@ -670,11 +856,87 @@
         });
     </script>
 
+
+    <script>
+        function searchLocation() {
+            const location = document.getElementById("location").value;
+
+            if (location === "") {
+                alert("Please select a location");
+                return;
+            }
+
+            document.getElementById("result").innerHTML =
+                "You selected: " + location;
+        }
+    </script>
+
+
+    <script>
+        const slides = document.querySelectorAll(".slide");
+        const next = document.querySelector(".next");
+        const prev = document.querySelector(".prev");
+
+        let index = 0;
+
+        function showSlide(i) {
+
+            slides.forEach(slide => {
+                slide.classList.remove("active");
+            });
+
+            slides[i].classList.add("active");
+        }
+
+        next.addEventListener("click", () => {
+
+            index++;
+
+            if (index >= slides.length) {
+                index = 0;
+            }
+
+            showSlide(index);
+
+        });
+
+        prev.addEventListener("click", () => {
+
+            index--;
+
+            if (index < 0) {
+                index = slides.length - 1;
+            }
+
+            showSlide(index);
+
+        });
+
+        setInterval(() => {
+
+            index++;
+
+            if (index >= slides.length) {
+                index = 0;
+            }
+
+            showSlide(index);
+
+        }, 10000);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 
 </body>
 

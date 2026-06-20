@@ -479,6 +479,7 @@ img { */
   display: flex;
   gap: 20px;
   margin-bottom: 25px;
+  background-color: #000;
 }
 
 .name-fields input,
@@ -504,7 +505,7 @@ img { */
 }
 
 .email-field button:hover {
-  background: #fff;
+  background: #000;
   color: #000;
 }
 
