@@ -218,7 +218,7 @@
     <div class="loading-screen" id="loadingScreen">
         <div class="loading-content">
             <h1 class="welcome-title">
-                Welcome to <span>9ja Cinemas Grill</span>
+                Welcome to <span>9ja Cinema Grill</span>
             </h1>
             <p class="welcome-subtitle">
                 Bringing the big-screen experience closer to you — movies, moments and memories.
@@ -240,15 +240,15 @@
     <script>
         const loadingScreen = document.getElementById("loadingScreen");
 
-        // Total display time before fade out + redirect
-        const displayTime = 9000; // 5 seconds
+       
+        const displayTime = 9000;
 
         setTimeout(() => {
             loadingScreen.classList.add("fade-out");
 
             setTimeout(() => {
                 window.location.href = "dashboard.html"; 
-            }, 900);
+            }, 500);
         }, displayTime);
     </script>
 

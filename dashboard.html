@@ -320,55 +320,96 @@
     }
 
     .now-showing-section {
-  background: #111111;
-}
+        background: #111111;
+    }
 
-.now-showing-title {
-  color: #ffffff;
-  font-size: 5rem;
-  font-weight: 400;
-  line-height: 1.1;
-  margin-left: 9px;
-  padding: 16px;
-}
+    .now-showing-title {
+        color: #ffffff;
+        font-size: 5rem;
+        font-weight: 400;
+        line-height: 1.1;
+        margin-left: 9px;
+        padding: 16px;
+    }
 
-.movie-card {
-  width: 100%;
-  height: 290px;          /* same height for every card */
-  border-radius: 12px;
-  overflow: hidden;
-  background: transparent;
-}
+    .movie-card {
+        width: 100%;
+        height: 290px;
+        /* same height for every card */
+        border-radius: 12px;
+        overflow: hidden;
+        background: transparent;
+    }
 
-.movie-poster {
-  width: 100%;
-  height: 100%;           /* fill the card */
-  object-fit: cover;      /* all flyers look equal */
-  display: block;
-  border-radius: 12px;
-}
+    .movie-poster {
+        width: 100%;
+        height: 100%;
+        /* fill the card */
+        object-fit: cover;
+        /* all flyers look equal */
+        display: block;
+        border-radius: 12px;
+    }
 
-/* Tablet */
-@media (max-width: 991.98px) {
-  .now-showing-title {
-    font-size: 2.5rem;
-  }
+    /* Tablet */
+    @media (max-width: 991.98px) {
+        .now-showing-title {
+            font-size: 2.5rem;
+        }
 
-  .movie-card {
-    height: 320px;
-  }
-}
+        .movie-card {
+            height: 320px;
+        }
+    }
 
-/* Mobile */
-@media (max-width: 767.98px) {
-  .now-showing-title {
-    font-size: 2rem;
-  }
+    /* Mobile */
+    @media (max-width: 767.98px) {
+        .now-showing-title {
+            font-size: 2rem;
+        }
 
-  .movie-card {
-    height: 260px;
-  }
-}
+        .movie-card {
+            height: 260px;
+        }
+    }
+
+
+    .movie-card {
+        border-radius: 12px;
+        cursor: pointer;
+    }
+
+    /* image styling */
+    .movie-poster {
+        border-radius: 12px;
+        transition: transform 0.4s ease;
+    }
+
+    /* zoom image slightly on hover */
+    .movie-card:hover .movie-poster {
+        transform: scale(1.08);
+    }
+
+    /* overlay hidden by default */
+    .movie-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.65);
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.3s ease;
+        border-radius: 12px;
+    }
+
+    /* show overlay on hover */
+    .movie-card:hover .movie-overlay {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .movie-overlay {
+        backdrop-filter: blur(4px);
+    }
 </style>
 
 <body>
@@ -419,7 +460,7 @@
                     Buy Ticket
                 </a>
             </li>
-            <li><a href="./thecube.html">The Cube</a></li>
+            <li><a href="/thecube.html">The Cube</a></li>
         </ul>
     </nav>
 
@@ -511,38 +552,173 @@
 
             <div class="row g-3 g-lg-4 now-showing-row">
                 <div class="col-6 col-md-4 col-lg-2">
-                    <div class="movie-card">
-                        <img src="https://img.magnific.com/premium-photo/female-with-scary-make-up-halloween-night-studio_224078-65.jpg?uid=R198485935&ga=GA1.1.283162996.1779704854&semt=ais_hybrid&w=740&q=80" alt="halloween" class="img-fluid movie-poster">
+                    <div class="movie-card position-relative overflow-hidden">
+
+                        <img src="./img/movie cover ten.jpg" alt="Deep Water" class="img-fluid movie-poster w-100">
+
+                        <!-- Hover Overlay -->
+                        <div class="movie-overlay d-flex flex-column justify-content-end p-3">
+
+                            <!-- Play Trailer -->
+                            <button class="btn btn-dark btn-sm rounded-pill mb-2">
+                                ▶ Play Trailer
+                            </button>
+
+                            <!-- Title + Duration -->
+                            <h5 class="text-white mb-1">The Hero</h5>
+                            <small class="text-light mb-3">
+                                ⏱ 1h 46m
+                            </small>
+
+                            <!-- Buttons -->
+                            <a href="#" class="btn btn-primary btn-sm mb-2">Buy Tickets</a>
+                            <a href="#" class="text-white text-decoration-none">
+                                More Info →
+                            </a>
+
+                        </div>
                     </div>
                 </div>
 
                 <div class="col-6 col-md-4 col-lg-2">
-                    <div class="movie-card">
-                        <img src="./img/movie cover ten.jpg" alt="Deep Water" class="img-fluid movie-poster">
+                    <div class="movie-card position-relative overflow-hidden">
+
+                        <img src="./img/movie cover ten.jpg" alt="Deep Water" class="img-fluid movie-poster w-100">
+
+                        <!-- Hover Overlay -->
+                        <div class="movie-overlay d-flex flex-column justify-content-end p-3">
+
+                            <!-- Play Trailer -->
+                            <button class="btn btn-dark btn-sm rounded-pill mb-2">
+                                ▶ Play Trailer
+                            </button>
+
+                            <!-- Title + Duration -->
+                            <h5 class="text-white mb-1">Deep Water</h5>
+                            <small class="text-light mb-3">
+                                ⏱ 1h 46m
+                            </small>
+
+                            <!-- Buttons -->
+                            <a href="#" class="btn btn-primary btn-sm mb-2">Buy Tickets</a>
+                            <a href="#" class="text-white text-decoration-none">
+                                More Info →
+                            </a>
+
+                        </div>
                     </div>
                 </div>
 
                 <div class="col-6 col-md-4 col-lg-2">
-                    <div class="movie-card">
-                        <img src="./img/movie cover four.jpg" alt="Animal Farm" class="img-fluid movie-poster">
+                    <div class="movie-card position-relative overflow-hidden">
+
+                        <img src="https://img.magnific.com/free-photo/close-up-zombie-sitting-cinema-theater_23-2150838847.jpg?uid=R198485935&ga=GA1.1.283162996.1779704854&semt=ais_hybrid&w=740&q=80" alt="Deep Water" class="img-fluid movie-poster w-100">
+
+                        <!-- Hover Overlay -->
+                        <div class="movie-overlay d-flex flex-column justify-content-end p-3">
+
+                            <!-- Play Trailer -->
+                            <a href="#" class="btn btn-dark btn-sm rounded-pill mb-2"> ▶ Play Trailer</a>
+
+                            <!-- Title + Duration -->
+                            <h5 class="text-white mb-1">Deep Water</h5>
+                            <small class="text-light mb-3">
+                                ⏱ 1h 46m
+                            </small>
+
+                            <!-- Buttons -->
+                            <a href="#" class="btn btn-primary btn-sm mb-2">Buy Tickets</a>
+                            <a href="#" class="text-white text-decoration-none">
+                                More Info →
+                            </a>
+
+                        </div>
                     </div>
                 </div>
 
                 <div class="col-6 col-md-4 col-lg-2">
-                    <div class="movie-card">
-                        <img src="https://img.magnific.com/free-photo/close-up-zombie-sitting-cinema-theater_23-2150838847.jpg?uid=R198485935&ga=GA1.1.283162996.1779704854&semt=ais_hybrid&w=740&q=80" alt="Efunroye" class="img-fluid movie-poster">
+                    <div class="movie-card position-relative overflow-hidden">
+
+                        <img src="./img/movie cover ten.jpg" alt="Deep Water" class="img-fluid movie-poster w-100">
+
+                        <!-- Hover Overlay -->
+                        <div class="movie-overlay d-flex flex-column justify-content-end p-3">
+
+                            <!-- Play Trailer -->
+                            <button class="btn btn-dark btn-sm rounded-pill mb-2">
+                                ▶ Play Trailer
+                            </button>
+
+                            <!-- Title + Duration -->
+                            <h5 class="text-white mb-1">Deep Water</h5>
+                            <small class="text-light mb-3">
+                                ⏱ 1h 46m
+                            </small>
+
+                            <!-- Buttons -->
+                            <a href="#" class="btn btn-primary btn-sm mb-2">Buy Tickets</a>
+                            <a href="#" class="text-white text-decoration-none">
+                                More Info →
+                            </a>
+
+                        </div>
                     </div>
                 </div>
 
                 <div class="col-6 col-md-4 col-lg-2">
-                    <div class="movie-card">
-                        <img src="./img/movie cover three.jpg" alt="Iwewa" class="img-fluid movie-poster">
+                    <div class="movie-card position-relative overflow-hidden">
+
+                        <img src="./img/movie cover ten.jpg" alt="Deep Water" class="img-fluid movie-poster w-100">
+
+                        <!-- Hover Overlay -->
+                        <div class="movie-overlay d-flex flex-column justify-content-end p-3">
+
+                            <!-- Play Trailer -->
+                            <button class="btn btn-dark btn-sm rounded-pill mb-2">
+                                ▶ Play Trailer
+                            </button>
+
+                            <!-- Title + Duration -->
+                            <h5 class="text-white mb-1">Deep Water</h5>
+                            <small class="text-light mb-3">
+                                ⏱ 1h 46m
+                            </small>
+
+                            <!-- Buttons -->
+                            <a href="#" class="btn btn-primary btn-sm mb-2">Buy Tickets</a>
+                            <a href="#" class="text-white text-decoration-none">
+                                More Info →
+                            </a>
+
+                        </div>
                     </div>
                 </div>
-
                 <div class="col-6 col-md-4 col-lg-2">
-                    <div class="movie-card">
-                        <img src="./img/movie cover six.jpg" alt="Movie Poster" class="img-fluid movie-poster">
+                    <div class="movie-card position-relative overflow-hidden">
+
+                        <img src="./img/movie cover ten.jpg" alt="Deep Water" class="img-fluid movie-poster w-100">
+
+                        <!-- Hover Overlay -->
+                        <div class="movie-overlay d-flex flex-column justify-content-end p-3">
+
+                            <!-- Play Trailer -->
+                            <button class="btn btn-dark btn-sm rounded-pill mb-2">
+                                ▶ Play Trailer
+                            </button>
+
+                            <!-- Title + Duration -->
+                            <h5 class="text-white mb-1">Deep Water</h5>
+                            <small class="text-light mb-3">
+                                ⏱ 1h 46m
+                            </small>
+
+                            <!-- Buttons -->
+                            <a href="#" class="btn btn-primary btn-sm mb-2">Buy Tickets</a>
+                            <a href="#" class="text-white text-decoration-none">
+                                More Info →
+                            </a>
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -748,7 +924,7 @@
                     </a>
 
                     <div class="address">
-                        <h2 class="cinema-name">9ja Cinemas Grill Ltd</h2>
+                        <h2 class="cinema-name">9ja Cinema Grill Ltd</h2>
 
                         <div class="cinema-address-wrap">
                             <i class="bi bi-geo-alt-fill address-icon"></i>
@@ -825,7 +1001,7 @@
 
             <!-- Bottom copyright -->
             <div class="copyright-bar">
-                © 2026 9ja Cinemas Grill Ltd . All rights reserved.
+                © 2026 9ja Cinema Grill Ltd . All rights reserved.
             </div>
         </div>
     </footer>
