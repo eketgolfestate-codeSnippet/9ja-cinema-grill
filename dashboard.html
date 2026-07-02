@@ -465,8 +465,7 @@
         border: 0;
         display: block;
     }
-
-   
+    
 </style>
 
 <body>
@@ -600,7 +599,7 @@
                     </div>
                 </div>
 
-                    <!-- Slide 4 -->
+                <!-- Slide 4 -->
                 <div class="slide">
                     <video autoplay muted loop playsinline>
                         <source src="/videos/THE WOMAN KING – Official Trailer (HD).mp4" type="video/mp4">
@@ -616,10 +615,12 @@
                 </div>
 
 
-                  <!-- Slide 5 -->
+                <!-- Slide 5 -->
                 <div class="slide">
                     <video autoplay muted loop playsinline>
-                        <source src="/videos/RAID_ Shadow Legends x Alien & Predator _ Deadly Cargo (Official Commercial).mp4" type="video/mp4">
+                        <source
+                            src="/videos/RAID_ Shadow Legends x Alien & Predator _ Deadly Cargo (Official Commercial).mp4"
+                            type="video/mp4">
                     </video>
 
                     <div class="content">
@@ -631,7 +632,7 @@
                     </div>
                 </div>
 
-                   <!-- Slide 6 -->
+                <!-- Slide 6 -->
                 <div class="slide">
                     <video autoplay muted loop playsinline>
                         <source src="/videos/Apocalypto - Official® Trailer [HD].mp4" type="video/mp4">
@@ -1752,6 +1753,34 @@
                 showSlide(index);
 
             }, 10000);
+        </script>
+
+
+
+        <script>
+
+            const carousel = document.getElementById("videoCarousel");
+
+            function pauseAllVideos() {
+                document.querySelectorAll("#videoCarousel video").forEach(video => {
+                    video.pause();
+                    video.currentTime = 0;
+                });
+            }
+
+            function playCurrentVideo() {
+                const activeVideo = carousel.querySelector(".carousel-item.active video");
+
+                if (activeVideo) {
+                    activeVideo.play().catch(() => { });
+                }
+            }
+
+            carousel.addEventListener("slide.bs.carousel", pauseAllVideos);
+
+            carousel.addEventListener("slid.bs.carousel", playCurrentVideo);
+
+            window.addEventListener("load", playCurrentVideo);
         </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
