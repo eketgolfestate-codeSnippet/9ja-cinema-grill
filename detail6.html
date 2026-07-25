@@ -719,6 +719,551 @@
         width: 100%;
         border: none;
     }
+
+    /* ============================================================
+       BOOKING MODAL — dynamic per-movie ticket + seat + food order
+       ============================================================ */
+    #ticketModal .modal-content {
+        background: #12131a;
+        border: 1px solid #2a2a35;
+        border-radius: 16px;
+    }
+
+    .booking-header {
+        background: linear-gradient(120deg, #1a0b33, #3a1466 60%, #6f2dbd);
+        padding: 22px 24px;
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        border-bottom: 1px solid #2a2a35;
+    }
+
+    .booking-header img {
+        width: 64px;
+        height: 90px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, .5);
+        flex-shrink: 0;
+    }
+
+    .booking-header-info h4 {
+        margin: 0 0 6px;
+        font-weight: 700;
+        font-size: 1.3rem;
+    }
+
+    .booking-header-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        font-size: .82rem;
+        color: #d9c9f5;
+    }
+
+    .booking-price-tag {
+        margin-left: auto;
+        text-align: right;
+        flex-shrink: 0;
+    }
+
+    .booking-price-tag small {
+        display: block;
+        color: #c9b8ea;
+        font-size: .68rem;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+    }
+
+    .booking-price-tag strong {
+        font-size: 1.25rem;
+        color: #d9a441;
+    }
+
+    .booking-section-title {
+        font-size: .92rem;
+        font-weight: 700;
+        letter-spacing: .04em;
+        text-transform: uppercase;
+        color: #d9a441;
+        margin: 22px 0 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    /* Seat map */
+    .seat-map-card {
+        background: #0b0c12;
+        border: 1px solid #23242e;
+        border-radius: 12px;
+        padding: 18px 14px;
+    }
+
+    .screen-indicator {
+        width: 100%;
+        text-align: center;
+        color: #8b8fa3;
+        font-size: .72rem;
+        letter-spacing: .15em;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    }
+
+    .screen-indicator::before {
+        content: "";
+        display: block;
+        height: 6px;
+        width: 70%;
+        margin: 0 auto 8px;
+        background: radial-gradient(ellipse at center, rgba(217, 164, 65, .55), transparent 70%);
+        border-radius: 50%;
+        filter: blur(1px);
+    }
+
+    .seat-map-scroll {
+        overflow-x: auto;
+        padding-bottom: 6px;
+    }
+
+    .seat-row {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 6px;
+        min-width: max-content;
+    }
+
+    .seat-row-label {
+        width: 20px;
+        flex-shrink: 0;
+        font-size: .72rem;
+        color: #7d8098;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .seat-btn {
+        width: 27px;
+        height: 27px;
+        flex-shrink: 0;
+        border-radius: 6px 6px 8px 8px;
+        border: 1px solid #33354a;
+        background: #1b1c27;
+        color: #aeb0c4;
+        font-size: .62rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: .15s ease;
+    }
+
+    .seat-btn:hover {
+        border-color: #7c3aed;
+        color: #fff;
+    }
+
+    .seat-btn.selected {
+        background: linear-gradient(160deg, #d9a441, #b8842b);
+        border-color: #d9a441;
+        color: #1a1204;
+        font-weight: 700;
+        box-shadow: 0 0 0 2px rgba(217, 164, 65, .25);
+    }
+
+    .seat-legend {
+        display: flex;
+        gap: 18px;
+        margin-top: 14px;
+        font-size: .74rem;
+        color: #8b8fa3;
+        flex-wrap: wrap;
+    }
+
+    .seat-legend span {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .legend-box {
+        width: 14px;
+        height: 14px;
+        border-radius: 4px;
+        display: inline-block;
+    }
+
+    .legend-box.available {
+        background: #1b1c27;
+        border: 1px solid #33354a;
+    }
+
+    .legend-box.selected {
+        background: linear-gradient(160deg, #d9a441, #b8842b);
+    }
+
+    .selected-seats-summary {
+        margin-top: 14px;
+        background: #151621;
+        border-radius: 8px;
+        padding: 10px 14px;
+        font-size: .84rem;
+        color: #cfd0dd;
+    }
+
+    /* Food & drinks menu */
+    .food-menu-card {
+        background: #0b0c12;
+        border: 1px solid #23242e;
+        border-radius: 12px;
+        padding: 4px 16px;
+        max-height: 260px;
+        overflow-y: auto;
+    }
+
+    .food-cat-title {
+        color: #a06bff;
+        font-weight: 700;
+        font-size: .76rem;
+        text-transform: uppercase;
+        letter-spacing: .06em;
+        margin: 14px 0 6px;
+    }
+
+    .food-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        padding: 9px 0;
+        border-bottom: 1px solid #1c1d28;
+    }
+
+    .food-item:last-child {
+        border-bottom: none;
+    }
+
+    .food-item-name {
+        display: block;
+        font-size: .9rem;
+        color: #f1f1f6;
+    }
+
+    .food-item-price {
+        display: block;
+        font-size: .76rem;
+        color: #8b8fa3;
+    }
+
+    .food-stepper {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+    }
+
+    .step-btn {
+        width: 27px;
+        height: 27px;
+        border-radius: 50%;
+        border: 1px solid #3a3c4d;
+        background: #1b1c27;
+        color: #fff;
+        font-size: 1rem;
+        line-height: 1;
+        cursor: pointer;
+    }
+
+    .step-btn:hover {
+        border-color: #d9a441;
+        color: #d9a441;
+    }
+
+    .qty-val {
+        min-width: 16px;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    /* Total bar */
+    .booking-total-bar {
+        background: #0b0c12;
+        border: 1px solid #23242e;
+        border-radius: 12px;
+        padding: 16px 18px;
+        margin-top: 22px;
+    }
+
+    .booking-total-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: .87rem;
+        color: #aeb0c4;
+        margin-bottom: 6px;
+    }
+
+    .booking-total-row.grand {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #d9a441;
+        border-top: 1px solid #23242e;
+        padding-top: 10px;
+        margin-top: 8px;
+    }
+
+    .booking-form-input {
+        background: #0b0c12 !important;
+        border: 1px solid #2a2a35 !important;
+        color: #fff !important;
+    }
+
+    .booking-form-input::placeholder {
+        color: #666a7d !important;
+    }
+
+    .booking-form-input:focus {
+        border-color: #7c3aed !important;
+        box-shadow: 0 0 0 .2rem rgba(124, 58, 237, .2) !important;
+    }
+
+    .btn-confirm-booking {
+        background: linear-gradient(120deg, #7c3aed, #5b21b6);
+        border: none;
+        font-weight: 700;
+        letter-spacing: .03em;
+    }
+
+    .btn-confirm-booking:hover {
+        background: linear-gradient(120deg, #8b4bff, #6d2ed8);
+        color: #fff;
+    }
+
+    /* ============================================================
+       PAYMENT MODAL — choose WhatsApp (agent-assisted) or Flutterwave
+       ============================================================ */
+    #paymentModal .modal-content {
+        background: #12131a;
+        border: 1px solid #2a2a35;
+        border-radius: 16px;
+    }
+
+    .payment-header {
+        background: linear-gradient(120deg, #1a0b33, #3a1466 60%, #6f2dbd);
+        padding: 20px 24px;
+        border-bottom: 1px solid #2a2a35;
+    }
+
+    .payment-header h4 {
+        margin: 0;
+        font-weight: 700;
+    }
+
+    .payment-order-summary {
+        background: #0b0c12;
+        border: 1px solid #23242e;
+        border-radius: 12px;
+        padding: 14px 18px;
+        margin-bottom: 20px;
+        font-size: .88rem;
+        color: #cfd0dd;
+    }
+
+    .payment-order-summary .row-line {
+        display: flex;
+        justify-content: space-between;
+        padding: 4px 0;
+    }
+
+    .payment-order-summary .row-line.total {
+        margin-top: 8px;
+        padding-top: 10px;
+        border-top: 1px solid #23242e;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #d9a441;
+    }
+
+    .payment-option {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        background: #0b0c12;
+        border: 1px solid #23242e;
+        border-radius: 12px;
+        padding: 16px 18px;
+        margin-bottom: 14px;
+        cursor: pointer;
+        transition: .18s ease;
+        width: 100%;
+        text-align: left;
+        color: #fff;
+    }
+
+    .payment-option:hover {
+        border-color: #7c3aed;
+        background: #14151f;
+    }
+
+    .payment-option-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        flex-shrink: 0;
+    }
+
+    .payment-option-icon.whatsapp {
+        background: rgba(37, 211, 102, .15);
+        color: #25d366;
+    }
+
+    .payment-option-icon.flutterwave {
+        background: rgba(255, 178, 46, .15);
+        color: #ffb22e;
+        font-weight: 800;
+        font-size: .85rem;
+    }
+
+    .payment-option-text strong {
+        display: block;
+        font-size: 1rem;
+    }
+
+    .payment-option-text span {
+        display: block;
+        font-size: .8rem;
+        color: #8b8fa3;
+        margin-top: 2px;
+    }
+
+    .payment-option-arrow {
+        margin-left: auto;
+        color: #666a7d;
+        flex-shrink: 0;
+    }
+
+    .whatsapp-confirm-step {
+        background: #0b0c12;
+        border: 1px dashed #25d366;
+        border-radius: 12px;
+        padding: 16px 18px;
+        margin-top: 4px;
+        font-size: .88rem;
+        color: #cfd0dd;
+    }
+
+    .whatsapp-confirm-step .btn-issue-ticket {
+        background: #25d366;
+        border: none;
+        color: #06210f;
+        font-weight: 700;
+        margin-top: 10px;
+    }
+
+    .whatsapp-confirm-step .btn-issue-ticket:hover {
+        background: #2fe578;
+        color: #06210f;
+    }
+
+    /* ============================================================
+       TICKET RECEIPT — printable ticket stub with QR confirmation
+       ============================================================ */
+    #receiptModal .modal-content {
+        background: transparent;
+        border: none;
+    }
+
+    .ticket-stub {
+        background: #fff;
+        color: #12131a;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, .5);
+    }
+
+    .ticket-stub-top {
+        background: linear-gradient(120deg, #1a0b33, #3a1466 60%, #6f2dbd);
+        color: #fff;
+        padding: 22px 24px 26px;
+        text-align: center;
+    }
+
+    .ticket-stub-top h3 {
+        margin: 4px 0 0;
+        font-weight: 800;
+        letter-spacing: .03em;
+    }
+
+    .ticket-stub-top small {
+        color: #d9c9f5;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+        font-size: .68rem;
+    }
+
+    .ticket-perforation {
+        position: relative;
+        height: 2px;
+        background-image: radial-gradient(circle, #111 3px, transparent 3px);
+        background-size: 16px 4px;
+        background-repeat: repeat-x;
+        background-position: center;
+    }
+
+    .ticket-stub-body {
+        padding: 18px 26px 4px;
+    }
+
+    .ticket-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 14px;
+        padding: 9px 0;
+        border-bottom: 1px dashed #e3e3e8;
+        font-size: .9rem;
+    }
+
+    .ticket-row:last-child {
+        border-bottom: none;
+    }
+
+    .ticket-row .label {
+        color: #7a7a86;
+        font-weight: 600;
+        flex-shrink: 0;
+    }
+
+    .ticket-row .value {
+        color: #12131a;
+        font-weight: 700;
+        text-align: right;
+    }
+
+    .ticket-qr-wrap {
+        text-align: center;
+        padding: 18px 26px 26px;
+    }
+
+    .ticket-qr-wrap #qrcode {
+        display: inline-block;
+        padding: 10px;
+        background: #fff;
+        border: 1px solid #eee;
+        border-radius: 10px;
+    }
+
+    .ticket-ref-note {
+        text-align: center;
+        font-size: .72rem;
+        letter-spacing: .08em;
+        color: #9a9aa5;
+        text-transform: uppercase;
+        margin-top: 8px;
+    }
 </style>
 
 <body>
@@ -788,34 +1333,200 @@
     </div>
 
 
-    <div class="modal fade" id="receiptModal" tabindex="-1">
-        <div class="modal-dialog">
+    <!-- ===================== BOOKING MODAL ===================== -->
+    <!-- Pre-fills automatically from whichever movie/day/time is
+         currently active on the page (see "show.bs.modal" listener) -->
+    <div class="modal fade" id="ticketModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
             <div class="modal-content">
 
-                <div class="modal-header bg-success text-white">
-                    <h5 class="modal-title">Ticket Receipt</h5>
+                <div class="booking-header">
+                    <img id="tmMoviePoster" src="" alt="Movie poster">
+                    <div class="booking-header-info">
+                        <h4 id="tmMovieTitle">Movie Title</h4>
+                        <div class="booking-header-meta">
+                            <span><i class="bi bi-calendar-event"></i> <span id="tmMovieDate">—</span></span>
+                            <span><i class="bi bi-clock"></i> <span id="tmMovieTime">—</span></span>
+                        </div>
+                    </div>
+                    <div class="booking-price-tag">
+                        <small>Ticket Price</small>
+                        <strong id="tmMoviePrice">₦0</strong>
+                    </div>
+                    <button class="btn-close btn-close-white ms-2" data-bs-dismiss="modal"></button>
                 </div>
 
-                <div class="modal-body text-center">
+                <div class="modal-body">
 
-                    <h4>🎬 9ja Cinemas Grill</h4>
+                    <div class="booking-section-title"><i class="bi bi-person-badge"></i> Your Details</div>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <input class="form-control form-control-lg booking-form-input" id="bookFirstName"
+                                placeholder="First Name">
+                        </div>
+                        <div class="col-md-6">
+                            <input class="form-control form-control-lg booking-form-input" id="bookLastName"
+                                placeholder="Last Name">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email" class="form-control form-control-lg booking-form-input" id="bookEmail"
+                                placeholder="Email Address">
+                        </div>
+                        <div class="col-md-6">
+                            <input class="form-control form-control-lg booking-form-input" id="bookPhone"
+                                placeholder="Phone Number">
+                        </div>
+                    </div>
 
-                    <p id="receiptName"></p>
-                    <p id="receiptEmail"></p>
-                    <p id="receiptPhone"></p>
-                    <p id="receiptMovie"></p>
-                    <p id="receiptSeat"></p>
-                    <p id="receiptDate"></p>
-                    <p id="receiptTotal"></p>
+                    <div class="booking-section-title"><i class="bi bi-grid-3x3-gap-fill"></i> Select Your Seat(s)
+                    </div>
+                    <div class="seat-map-card">
+                        <div class="screen-indicator">Screen this way</div>
+                        <div class="seat-map-scroll" id="seatMapWrap"></div>
+                        <div class="seat-legend">
+                            <span><span class="legend-box available"></span> Available</span>
+                            <span><span class="legend-box selected"></span> Selected</span>
+                        </div>
+                        <div class="selected-seats-summary">
+                            Selected seats (<span id="seatCountDisplay">0</span>):
+                            <span id="selectedSeatsList">No seats selected</span>
+                        </div>
+                    </div>
 
-                    <div id="qrcode"></div>
+                    <div class="booking-section-title"><i class="bi bi-cup-straw"></i> Snacks & Drinks</div>
+                    <div class="food-menu-card" id="foodMenuWrap"></div>
 
-                    <button onclick="window.print()" class="btn btn-primary mt-3">
-                        Print Ticket
+                    <div class="booking-total-bar">
+                        <div class="booking-total-row">
+                            <span>Tickets (<span id="seatCountDisplay2">0</span> seat(s) × <span
+                                    id="ticketUnitPrice">₦0</span>)</span>
+                            <span>₦<span id="ticketSubtotal">0</span></span>
+                        </div>
+                        <div class="booking-total-row">
+                            <span>Snacks & Drinks</span>
+                            <span>₦<span id="foodSubtotal">0</span></span>
+                        </div>
+                        <div class="booking-total-row grand">
+                            <span>Total</span>
+                            <span>₦<span id="grandTotal">0</span></span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer border-0">
+                    <button class="btn btn-confirm-booking btn-lg w-100 text-white"
+                        onclick="validateAndProceedToPayment()">
+                        Confirm Booking &amp; Get Ticket
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ===================== PAYMENT METHOD ===================== -->
+    <div class="modal fade" id="paymentModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="payment-header d-flex align-items-center justify-content-between">
+                    <h4>Choose Payment Method</h4>
+                    <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="payment-order-summary">
+                        <div class="row-line"><span>Booking Ref</span><span id="payOrderRef">—</span></div>
+                        <div class="row-line"><span>Movie</span><span id="payMovieLine">—</span></div>
+                        <div class="row-line"><span>Seats</span><span id="paySeatsLine">—</span></div>
+                        <div class="row-line total"><span>Amount to Pay</span><span id="payTotalDisplay">₦0</span>
+                        </div>
+                    </div>
+
+                    <button type="button" class="payment-option" onclick="payViaWhatsApp()">
+                        <span class="payment-option-icon whatsapp"><i class="bi bi-whatsapp"></i></span>
+                        <span class="payment-option-text">
+                            <strong>Pay via WhatsApp</strong>
+                            <span>Chat a live agent to complete payment and get help</span>
+                        </span>
+                        <span class="payment-option-arrow"><i class="bi bi-chevron-right"></i></span>
                     </button>
 
+                    <button type="button" class="payment-option" onclick="payViaFlutterwave()">
+                        <span class="payment-option-icon flutterwave">FLW</span>
+                        <span class="payment-option-text">
+                            <strong>Pay with Card / Bank / USSD</strong>
+                            <span>Secure instant checkout powered by Flutterwave</span>
+                        </span>
+                        <span class="payment-option-arrow"><i class="bi bi-chevron-right"></i></span>
+                    </button>
+
+                    <div id="waConfirmStep" class="whatsapp-confirm-step d-none">
+                        A chat window has opened on WhatsApp with your booking details — an agent will confirm your
+                        payment there. Once you've completed payment, tap below to issue your ticket.
+                        <br>
+                        <button type="button" class="btn btn-issue-ticket w-100" onclick="confirmWhatsAppPaymentDone()">
+                            I've Sent Payment — Issue My Ticket
+                        </button>
+                    </div>
+
                 </div>
 
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ===================== TICKET RECEIPT ===================== -->
+    <div class="modal fade" id="receiptModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="ticket-stub">
+
+                    <div class="ticket-stub-top">
+                        <small>9ja Cinema Grill Ltd</small>
+                        <h3>🎬 Admission Ticket</h3>
+                    </div>
+
+                    <div class="ticket-perforation"></div>
+
+                    <div class="ticket-stub-body">
+                        <div class="ticket-row"><span class="label">Booking Ref</span><span class="value"
+                                id="receiptRef">—</span></div>
+                        <div class="ticket-row"><span class="label">Name</span><span class="value"
+                                id="receiptName">—</span></div>
+                        <div class="ticket-row"><span class="label">Movie</span><span class="value"
+                                id="receiptMovie">—</span></div>
+                        <div class="ticket-row"><span class="label">Showtime</span><span class="value"
+                                id="receiptShow">—</span></div>
+                        <div class="ticket-row"><span class="label">Seat(s)</span><span class="value"
+                                id="receiptSeats">—</span></div>
+                        <div class="ticket-row"><span class="label">Snacks & Drinks</span><span class="value"
+                                id="receiptFood">—</span></div>
+                        <div class="ticket-row"><span class="label">Email</span><span class="value"
+                                id="receiptEmail">—</span></div>
+                        <div class="ticket-row"><span class="label">Phone</span><span class="value"
+                                id="receiptPhone">—</span></div>
+                        <div class="ticket-row"><span class="label">Total Paid</span><span class="value"
+                                id="receiptTotal">₦0</span></div>
+                    </div>
+
+                    <div class="ticket-qr-wrap">
+                        <div id="qrcode"></div>
+                        <div class="ticket-ref-note">Scan at entrance for confirmation</div>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer border-0 justify-content-center">
+                    <button onclick="window.print()" class="btn btn-outline-light">
+                        <i class="bi bi-printer"></i> Print Ticket
+                    </button>
+                    <button class="btn btn-success" data-bs-dismiss="modal">Done</button>
+                </div>
             </div>
         </div>
     </div>
@@ -842,84 +1553,6 @@
 
                     </div>
 
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="ticketModal" tabindex="-1">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-
-                <div class="modal-header text-white" style="background-color: green;">
-                    <h3 class="modal-title fw-bold">Book Ticket 🎬</h3>
-                    <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-
-                <div class="modal-body fs-5">
-
-                    <!-- CUSTOMER INFO -->
-                    <input class="form-control form-control-lg mb-3" id="firstName" placeholder="First Name">
-
-                    <input class="form-control form-control-lg mb-3" id="middleName"
-                        placeholder="Middle Name (Optional)">
-
-                    <input class="form-control form-control-lg mb-3" id="lastName" placeholder="Last Name">
-
-                    <input class="form-control form-control-lg mb-3" id="email" placeholder="Email">
-
-                    <input class="form-control form-control-lg mb-4" id="phone" placeholder="Phone Number">
-
-                    <!-- MOVIE -->
-                    <label class="form-label fw-bold fs-5">Select Movie</label>
-                    <select class="form-select form-select-lg mb-4" id="movie">
-                        <option value="5000">Mission Impossible - ₦5,000</option>
-                        <option value="4500">Avatar - ₦4,500</option>
-                        <option value="4000">Black Panther - ₦4,000</option>
-                    </select>
-
-                    <!-- DATE -->
-                    <label class="form-label fw-bold fs-5">Select Date</label>
-                    <input type="date" class="form-control form-control-lg mb-4" id="date">
-
-                    <!-- SEAT -->
-                    <label class="form-label fw-bold fs-5">Select Seat</label>
-                    <select class="form-select form-select-lg mb-4" id="seat">
-                        <option>A1</option>
-                        <option>A2</option>
-                        <option>A3</option>
-                        <option>B1</option>
-                        <option>B2</option>
-                    </select>
-
-                    <!-- FOOD -->
-                    <label class="form-label fw-bold fs-5">Food Menu</label>
-                    <select class="form-select form-select-lg mb-4 extra">
-                        <option value="0">None</option>
-                        <option value="2500">Burger - ₦2,500</option>
-                        <option value="3000">Chicken & Chips - ₦3,000</option>
-                    </select>
-
-                    <!-- DRINK -->
-                    <label class="form-label fw-bold fs-5">Drinks</label>
-                    <select class="form-select form-select-lg mb-4 extra">
-                        <option value="0">None</option>
-                        <option value="1000">Coke - ₦1,000</option>
-                        <option value="1500">Malt - ₦1,500</option>
-                    </select>
-
-                    <!-- TOTAL -->
-                    <div class="alert alert-success fs-4 fw-bold text-center">
-                        Total: ₦<span id="total">5000</span>
-                    </div>
-
-                </div>
-
-                <div class="modal-footer">
-                    <button class="btn btn-success btn-lg w-100 fw-bold" onclick="generateReceipt()">
-                        Pay Now
-                    </button>
                 </div>
 
             </div>
@@ -1024,20 +1657,26 @@
     </footer>
 
 
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- QR code generator used for the ticket receipt -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
 
+    <!-- Flutterwave inline checkout SDK -->
+    <script src="https://checkout.flutterwave.com/v3.js"></script>
 
 
     <script>
 
+        // Each movie now carries its own ticket price, used to
+        // pre-fill the booking modal the moment it is opened.
         const schedule = {
 
             "Mon 22 Jun": [
                 {
                     time: "5:00 PM - 6:30 PM",
                     title: "RIDE OR DIE",
+                    price: 4000,
                     poster: "https://m.media-amazon.com/images/M/MV5BMGUxMjFkMDEtNGJkZC00MTUwLWFiZjUtYWZhZWYxNzE1ZDEwXkEyXkFqcGc@._V1_FMjpg_UX898_.jpg",
                     trailer: "https://www.youtube.com/embed/QFGAxkTRAG8?autoplay=1&=1",
                     desc: "The Bluff is a gripping action-adventure thriller set in the 19th-century Caribbean. The film follows Ercell Bodden, a former pirate trying to leave her violent past behind and live peacefully with her family, until a ruthless enemy from her past returns to hunt her down. Forced back into a dangerous fight for survival, Ercell must protect the people she loves while confronting the secrets she thought were buried forever."
@@ -1048,6 +1687,7 @@
                 {
                     time: "7:00 PM - 8:00 PM",
                     title: "THE WOMAN KING 2",
+                    price: 5000,
                     poster: "https://i.pinimg.com/736x/67/78/e5/6778e5c46ea55b6dac442747f1f7ccf0.jpg",
                     trailer: "https://www.youtube.com/embed/3RDaPV_rJ1Y?si=1x-0sqPUmuYncF2b&amp;autoplay=1&=1",
                     desc: "The Woman King 2 follows a new generation of Agojie warriors as they battle powerful enemies to protect the Kingdom of Dahomey. Filled with action, courage, and sacrifice, the story continues the inspiring legacy of the legendary women warriors."
@@ -1058,6 +1698,7 @@
                 {
                     time: "8:30PM - 9:40 PM",
                     title: "AVATAR",
+                    price: 5500,
                     poster: "https://i.pinimg.com/736x/f3/e3/3d/f3e33d9361bb4986b75645df7c29cd26.jpg",
                     trailer: "https://www.youtube.com/embed/nb_fFj_0rq8?autoplay=1&=1",
                     desc: "Avatar follows Jake Sully as he journeys to the breathtaking world of Pandora, where he must choose between protecting his new home and serving humanity. A visually stunning adventure filled with action, discovery, and unforgettable characters."
@@ -1068,6 +1709,7 @@
                 {
                     time: "10:00 PM - 11:00 PM",
                     title: "VAN HELSING 2",
+                    price: 4500,
                     poster: "https://i.pinimg.com/736x/90/27/d7/9027d7410f2bfbdc2bf9dc14d7e419b6.jpg",
                     trailer: "https://www.youtube.com/embed/650BlLF3ZLY?autoplay=1&=1",
                     desc: "Van Helsing 2 follows the legendary monster hunter as he faces a new wave of deadly supernatural creatures threatening humanity. Packed with intense action, dark mysteries, and epic battles, the hunt begins once again."
@@ -1078,6 +1720,7 @@
                 {
                     time: "11:30 PM - 12:00 AM",
                     title: "RIDDICK 4",
+                    price: 4800,
                     poster: "https://i.pinimg.com/736x/c6/0a/a0/c60aa057e50daa20df30ba655ab08d4d.jpg",
                     trailer: "https://www.youtube.com/embed/pOwgL4scXDg?autoplay=1&=1",
                     desc: "Riddick 4 follows the infamous antihero, Riddick, as he returns to his homeworld of Furya to confront deadly alien creatures and ruthless enemies determined to wipe out his people. Forced to embrace his destiny, Riddick must fight for survival, uncover long-buried secrets, and lead an epic battle to reclaim his world. Packed with intense action, thrilling sci-fi adventure, and breathtaking visuals, this chapter pushes the legendary warrior to his greatest challenge yet."
@@ -1088,6 +1731,7 @@
                 {
                     time: "3:00 PM - 4:30 PM",
                     title: "THE SCORPION KING",
+                    price: 4200,
                     poster: "https://i.pinimg.com/736x/10/9c/2c/109c2c5bfc904da7f0fd30fc5945bed5.jpg",
                     trailer: "https://www.youtube.com/embed/h4AuPA-wdq8?autoplay=1&=1",
                     desc: "The Scorpion King follows the fearless warrior Mathayus as he rises from a skilled mercenary to a legendary king. Facing powerful enemies, ancient magic, and dangerous betrayals, he must fight to protect his people and fulfill his destiny. Filled with epic battles, adventure, and action, this timeless tale delivers an unforgettable journey of courage and honor."
@@ -1098,6 +1742,7 @@
                 {
                     time: "5:00 PM - 6:30 PM",
                     title: "KINGSMAN",
+                    price: 4600,
                     poster: "https://i.pinimg.com/736x/44/94/6c/44946c4360609d9f22f9c9415a1fbe34.jpg",
                     trailer: "https://www.youtube.com/embed/b_8fT_DItQk?autoplay=1&=1",
                     desc: "Kingsman follows a talented young recruit as he joins a secret intelligence agency dedicated to protecting the world from dangerous threats. As he undergoes intense training, he must prove himself while facing a powerful enemy with a plan that could change the world forever. Packed with stylish action, thrilling espionage, and sharp humor, *Kingsman* delivers an unforgettable spy adventure."
@@ -1107,6 +1752,13 @@
 
         let currentDayData = [];
         let selectedMovieIndex = 0;
+
+        // Tracks whatever is currently on screen so the booking
+        // modal always opens pre-filled with the right movie.
+        let currentMovie = null;
+        let currentActiveDay = "";
+        let currentActiveTime = "";
+        let currentTrailer = "";
 
         const dayBoxes = document.querySelectorAll(".day-box");
         const timeButtons = document.querySelectorAll(".badge-time");
@@ -1126,7 +1778,8 @@
                 movie.title + " Trailer";
 
             currentTrailer = movie.trailer;
-
+            currentMovie = movie;
+            currentActiveTime = movie.time;
         }
 
         // day click
@@ -1137,6 +1790,7 @@
 
                 const day = dayBox.innerText.trim();
                 currentDayData = schedule[day] || [];
+                currentActiveDay = day;
 
                 if (currentDayData.length === 0) {
                     // if no movie for that day, clear or hide times
@@ -1183,70 +1837,335 @@
     </script>
 
 
-
     <script>
 
-        function updateTotal() {
-            let movie = parseInt(document.getElementById("movie").value);
-            let extras = 0;
+        /* =========================================================
+           BOOKING MODAL LOGIC
+           - Seat map: 10 rows (A–J) x 10 seats = 100 seats,
+             multi-select, arranged horizontally per row.
+           - Food & drinks: quantity steppers, variety of items.
+           - Live running total: (seats × ticket price) + food total.
+           - Confirm booking -> validates form -> renders a
+             professional printable ticket with a QR code.
+           ========================================================= */
 
-            document.querySelectorAll(".extra").forEach(e => {
-                extras += parseInt(e.value || 0);
+        const foodMenu = [
+            { id: "popcorn_salt", name: "Popcorn (Salted)", price: 1500, cat: "Snacks" },
+            { id: "popcorn_caramel", name: "Popcorn (Caramel)", price: 1800, cat: "Snacks" },
+            { id: "nachos", name: "Nachos & Cheese", price: 2200, cat: "Snacks" },
+            { id: "hotdog", name: "Hotdog", price: 2000, cat: "Snacks" },
+            { id: "chicken_chips", name: "Chicken & Chips", price: 3000, cat: "Meals" },
+            { id: "burger", name: "Classic Burger", price: 2500, cat: "Meals" },
+            { id: "pizza", name: "Pizza Slice", price: 2000, cat: "Meals" },
+            { id: "suya", name: "Beef Suya Wrap", price: 2800, cat: "Meals" },
+            { id: "icecream", name: "Ice Cream Cup", price: 1500, cat: "Desserts" },
+            { id: "coke", name: "Coca-Cola", price: 1000, cat: "Drinks" },
+            { id: "fanta", name: "Fanta", price: 1000, cat: "Drinks" },
+            { id: "malt", name: "Malt", price: 1500, cat: "Drinks" },
+            { id: "water", name: "Bottled Water", price: 500, cat: "Drinks" },
+            { id: "slush", name: "Slush Puppie", price: 1800, cat: "Drinks" }
+        ];
+
+        const SEAT_ROWS = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
+        const SEATS_PER_ROW = 10;
+
+        let selectedSeats = new Set();
+        let foodOrder = {};
+
+        function renderSeats() {
+            const wrap = document.getElementById("seatMapWrap");
+            wrap.innerHTML = "";
+
+            SEAT_ROWS.forEach(row => {
+                const rowDiv = document.createElement("div");
+                rowDiv.className = "seat-row";
+
+                const label = document.createElement("span");
+                label.className = "seat-row-label";
+                label.textContent = row;
+                rowDiv.appendChild(label);
+
+                for (let i = 1; i <= SEATS_PER_ROW; i++) {
+                    const seatId = row + i;
+
+                    const btn = document.createElement("button");
+                    btn.type = "button";
+                    btn.className = "seat-btn";
+                    btn.textContent = i;
+                    btn.dataset.seat = seatId;
+                    btn.addEventListener("click", () => toggleSeat(seatId, btn));
+
+                    rowDiv.appendChild(btn);
+                }
+
+                wrap.appendChild(rowDiv);
             });
-
-            document.getElementById("total").textContent = movie + extras;
         }
 
-        document.querySelectorAll("select").forEach(el => {
-            el.addEventListener("change", updateTotal);
+        function toggleSeat(seatId, btn) {
+            if (selectedSeats.has(seatId)) {
+                selectedSeats.delete(seatId);
+                btn.classList.remove("selected");
+            } else {
+                selectedSeats.add(seatId);
+                btn.classList.add("selected");
+            }
+            updateBookingTotal();
+        }
+
+        function renderFoodMenu() {
+            const container = document.getElementById("foodMenuWrap");
+            container.innerHTML = "";
+
+            const categories = [...new Set(foodMenu.map(item => item.cat))];
+
+            categories.forEach(cat => {
+                const catTitle = document.createElement("div");
+                catTitle.className = "food-cat-title";
+                catTitle.textContent = cat;
+                container.appendChild(catTitle);
+
+                foodMenu.filter(item => item.cat === cat).forEach(item => {
+                    const row = document.createElement("div");
+                    row.className = "food-item";
+                    row.innerHTML = `
+                        <div>
+                            <span class="food-item-name">${item.name}</span>
+                            <span class="food-item-price">₦${item.price.toLocaleString()}</span>
+                        </div>
+                        <div class="food-stepper">
+                            <button type="button" class="step-btn" onclick="changeFoodQty('${item.id}', -1)">−</button>
+                            <span id="qty_${item.id}" class="qty-val">0</span>
+                            <button type="button" class="step-btn" onclick="changeFoodQty('${item.id}', 1)">+</button>
+                        </div>
+                    `;
+                    container.appendChild(row);
+                });
+            });
+        }
+
+        function changeFoodQty(id, delta) {
+            const current = foodOrder[id] || 0;
+            const next = Math.max(0, current + delta);
+            foodOrder[id] = next;
+            document.getElementById(`qty_${id}`).textContent = next;
+            updateBookingTotal();
+        }
+
+        function updateBookingTotal() {
+            const seatCount = selectedSeats.size;
+            const unitPrice = (currentMovie && currentMovie.price) || 0;
+            const ticketTotal = seatCount * unitPrice;
+
+            let foodTotal = 0;
+            Object.keys(foodOrder).forEach(id => {
+                const qty = foodOrder[id] || 0;
+                if (qty > 0) {
+                    const item = foodMenu.find(f => f.id === id);
+                    foodTotal += qty * item.price;
+                }
+            });
+
+            document.getElementById("seatCountDisplay").textContent = seatCount;
+            document.getElementById("seatCountDisplay2").textContent = seatCount;
+            document.getElementById("ticketUnitPrice").textContent = `₦${unitPrice.toLocaleString()}`;
+            document.getElementById("ticketSubtotal").textContent = ticketTotal.toLocaleString();
+            document.getElementById("foodSubtotal").textContent = foodTotal.toLocaleString();
+            document.getElementById("grandTotal").textContent = (ticketTotal + foodTotal).toLocaleString();
+
+            document.getElementById("selectedSeatsList").textContent =
+                seatCount ? [...selectedSeats].sort().join(", ") : "No seats selected";
+        }
+
+        function resetBookingForm() {
+            selectedSeats = new Set();
+            foodOrder = {};
+
+            document.getElementById("bookFirstName").value = "";
+            document.getElementById("bookLastName").value = "";
+            document.getElementById("bookEmail").value = "";
+            document.getElementById("bookPhone").value = "";
+
+            renderSeats();
+            renderFoodMenu();
+            updateBookingTotal();
+        }
+
+        // Every time the booking modal is opened, pull in whichever
+        // movie/day/time is currently active on the page.
+        document.getElementById("ticketModal").addEventListener("show.bs.modal", function () {
+            if (!currentMovie) return;
+
+            document.getElementById("tmMoviePoster").src = currentMovie.poster;
+            document.getElementById("tmMovieTitle").textContent = currentMovie.title;
+            document.getElementById("tmMovieDate").textContent = currentActiveDay || "—";
+            document.getElementById("tmMovieTime").textContent = currentActiveTime || currentMovie.time;
+            document.getElementById("tmMoviePrice").textContent = `₦${(currentMovie.price || 0).toLocaleString()}`;
+
+            resetBookingForm();
         });
 
-        function generateReceipt() {
+        // Holds the validated booking while the person picks a
+        // payment method and pays; the ticket is only issued after
+        // payment is completed (WhatsApp agent confirmation or a
+        // successful Flutterwave transaction).
+        let pendingBooking = null;
 
-            let firstName = document.getElementById("firstName").value;
-            let middleName = document.getElementById("middleName").value;
-            let lastName = document.getElementById("lastName").value;
-            let email = document.getElementById("email").value;
-            let phone = document.getElementById("phone").value;
+        function validateAndProceedToPayment() {
+            const firstName = document.getElementById("bookFirstName").value.trim();
+            const lastName = document.getElementById("bookLastName").value.trim();
+            const email = document.getElementById("bookEmail").value.trim();
+            const phone = document.getElementById("bookPhone").value.trim();
 
-            let movie = document.getElementById("movie").options[document.getElementById("movie").selectedIndex].text;
-            let seat = document.getElementById("seat").value;
-            let date = document.getElementById("date").value;
-            let total = document.getElementById("total").textContent;
+            if (!firstName || !lastName) {
+                alert("Please enter your full name.");
+                return;
+            }
+            if (!email) {
+                alert("Please enter your email address.");
+                return;
+            }
+            if (selectedSeats.size === 0) {
+                alert("Please select at least one seat.");
+                return;
+            }
 
-            document.getElementById("receiptName").innerHTML =
-                `<b>Name:</b> ${firstName} ${middleName} ${lastName}`;
+            const seatList = [...selectedSeats].sort().join(", ");
+            const orderRef = "CG-" + Date.now().toString(36).toUpperCase();
+            const grandTotalText = document.getElementById("grandTotal").textContent;
+            const grandTotalNumber = parseInt(grandTotalText.replace(/,/g, ""), 10) || 0;
 
-            document.getElementById("receiptEmail").innerHTML =
-                `<b>Email:</b> ${email}`;
+            const foodSummary = Object.keys(foodOrder)
+                .filter(id => foodOrder[id] > 0)
+                .map(id => {
+                    const item = foodMenu.find(f => f.id === id);
+                    return `${item.name} x${foodOrder[id]}`;
+                }).join(", ") || "None";
 
-            document.getElementById("receiptPhone").innerHTML =
-                `<b>Phone:</b> ${phone}`;
+            pendingBooking = {
+                orderRef, firstName, lastName, email, phone,
+                movie: currentMovie.title,
+                show: `${currentActiveDay || ""} • ${currentActiveTime || currentMovie.time}`,
+                seatList,
+                foodSummary,
+                totalText: grandTotalText,
+                totalNumber: grandTotalNumber
+            };
 
-            document.getElementById("receiptMovie").innerHTML =
-                `<b>Movie:</b> ${movie}`;
+            // Populate the payment modal's order summary
+            document.getElementById("payOrderRef").textContent = orderRef;
+            document.getElementById("payMovieLine").textContent = `${pendingBooking.movie} — ${pendingBooking.show}`;
+            document.getElementById("paySeatsLine").textContent = seatList;
+            document.getElementById("payTotalDisplay").textContent = `₦${grandTotalText}`;
+            document.getElementById("waConfirmStep").classList.add("d-none");
 
-            document.getElementById("receiptSeat").innerHTML =
-                `<b>Seat:</b> ${seat}`;
-
-            document.getElementById("receiptDate").innerHTML =
-                `<b>Date:</b> ${date}`;
-
-            document.getElementById("receiptTotal").innerHTML =
-                `<b>Total:</b> ₦${total}`;
-
-            document.getElementById("qrcode").innerHTML = "";
-
-            new QRCode(document.getElementById("qrcode"), {
-                text: `${firstName}-${movie}-${seat}-${date}-${total}`,
-                width: 120,
-                height: 120
-            });
-
-            new bootstrap.Modal(document.getElementById("receiptModal")).show();
+            bootstrap.Modal.getInstance(document.getElementById("ticketModal"))?.hide();
+            new bootstrap.Modal(document.getElementById("paymentModal")).show();
         }
 
-        updateTotal();
+        // Opens a prefilled WhatsApp chat to a live agent who will
+        // confirm the payment manually.
+        function payViaWhatsApp() {
+            if (!pendingBooking) return;
+
+            // TODO: replace with your real WhatsApp Business number,
+            // in international format with no "+" or leading zero,
+            // e.g. Nigeria 080XXXXXXXX -> "2348XXXXXXXX"
+            const AGENT_WHATSAPP_NUMBER = "2348000000000";
+
+            const message =
+                `Hello 9ja Cinema Grill! I'd like to pay for my booking.%0A%0A` +
+                `Booking Ref: ${pendingBooking.orderRef}%0A` +
+                `Name: ${pendingBooking.firstName} ${pendingBooking.lastName}%0A` +
+                `Movie: ${pendingBooking.movie}%0A` +
+                `Showtime: ${pendingBooking.show}%0A` +
+                `Seats: ${pendingBooking.seatList}%0A` +
+                `Food/Drinks: ${pendingBooking.foodSummary}%0A` +
+                `Total: ₦${pendingBooking.totalText}`;
+
+            window.open(`https://wa.me/${AGENT_WHATSAPP_NUMBER}?text=${message}`, "_blank");
+
+            document.getElementById("waConfirmStep").classList.remove("d-none");
+        }
+
+        // Called once the person confirms (in the UI) that the agent
+        // has verified their WhatsApp payment.
+        function confirmWhatsAppPaymentDone() {
+            issueTicket();
+        }
+
+        // Launches Flutterwave's inline checkout for card / bank /
+        // USSD payment. The ticket is issued in the success callback.
+        function payViaFlutterwave() {
+            if (!pendingBooking) return;
+
+            if (typeof FlutterwaveCheckout !== "function") {
+                alert("Payment gateway failed to load. Please check your connection and try again.");
+                return;
+            }
+
+            FlutterwaveCheckout({
+                // TODO: replace with your real Flutterwave public key
+                // (find it in your Flutterwave dashboard under Settings > API)
+                public_key: "FLWPUBK_TEST-REPLACE-WITH-YOUR-PUBLIC-KEY-X",
+                tx_ref: pendingBooking.orderRef,
+                amount: pendingBooking.totalNumber,
+                currency: "NGN",
+                payment_options: "card, banktransfer, ussd",
+                customer: {
+                    email: pendingBooking.email,
+                    phone_number: pendingBooking.phone,
+                    name: `${pendingBooking.firstName} ${pendingBooking.lastName}`
+                },
+                customizations: {
+                    title: "9ja Cinema Grill Ltd",
+                    description: `Ticket for ${pendingBooking.movie}`,
+                    logo: "./img/logo cinema grill.png"
+                },
+                callback: function (response) {
+                    if (response.status === "successful" || response.status === "completed") {
+                        issueTicket();
+                    } else {
+                        alert("Payment was not completed. Please try again.");
+                    }
+                },
+                onclose: function () {
+                    // Person closed the Flutterwave popup without paying —
+                    // stay on the payment modal so they can retry.
+                }
+            });
+        }
+
+        // Renders the printable ticket + QR code from the pending
+        // booking once payment has been confirmed.
+        function issueTicket() {
+            if (!pendingBooking) return;
+            const b = pendingBooking;
+
+            document.getElementById("receiptRef").textContent = b.orderRef;
+            document.getElementById("receiptName").textContent = `${b.firstName} ${b.lastName}`;
+            document.getElementById("receiptMovie").textContent = b.movie;
+            document.getElementById("receiptShow").textContent = b.show;
+            document.getElementById("receiptSeats").textContent = b.seatList;
+            document.getElementById("receiptFood").textContent = b.foodSummary;
+            document.getElementById("receiptEmail").textContent = b.email;
+            document.getElementById("receiptPhone").textContent = b.phone || "—";
+            document.getElementById("receiptTotal").textContent = `₦${b.totalText}`;
+
+            document.getElementById("qrcode").innerHTML = "";
+            new QRCode(document.getElementById("qrcode"), {
+                text: `REF:${b.orderRef}|NAME:${b.firstName} ${b.lastName}|MOVIE:${b.movie}|SEATS:${b.seatList}|TOTAL:₦${b.totalText}`,
+                width: 130,
+                height: 130,
+                colorDark: "#0b1220",
+                colorLight: "#ffffff"
+            });
+
+            bootstrap.Modal.getInstance(document.getElementById("paymentModal"))?.hide();
+            new bootstrap.Modal(document.getElementById("receiptModal")).show();
+
+            pendingBooking = null;
+        }
 
     </script>
 
@@ -1263,9 +2182,6 @@
 
 
     <script>
-
-
-        let currentTrailer = "";
 
         const trailerModalElement = document.getElementById("trailerModal");
         const trailerFrame = document.getElementById("trailerVideo");
@@ -1288,16 +2204,7 @@
 
         // Stop Trailer
         trailerModalElement.addEventListener("hidden.bs.modal", function () {
-
             trailerFrame.src = "";
-
-
-
-
-            document.getElementById("trailerTitle").textContent =
-                movie.title + " Trailer";
-
-            currentTrailer = movie.trailer;
         });
     </script>
 
