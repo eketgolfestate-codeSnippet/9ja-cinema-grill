@@ -1,6 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +20,7 @@
     <link rel="shortcut icon" href="./img/cinemalogo.jpeg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
+ 
 </head>
 <style>
     body {
@@ -28,13 +29,13 @@
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         color: #fff;
     }
-
+ 
     .cinema-footer {
         background: #181818;
         padding: 70px 0 25px;
         color: #fff;
     }
-
+ 
     /* Logo block */
     .footer-brand-title {
         font-size: 14px;
@@ -42,7 +43,7 @@
         color: #ffffff;
         margin-bottom: 12px;
     }
-
+ 
     .footer-logo {
         display: inline-flex;
         align-items: center;
@@ -51,7 +52,7 @@
         overflow: hidden;
         box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
     }
-
+ 
     .footer-logo .logo-left {
         background: #7c3aed;
         color: #fff;
@@ -61,7 +62,7 @@
         line-height: 1;
         text-transform: lowercase;
     }
-
+ 
     .footer-logo .logo-right {
         background: #000;
         color: #fff;
@@ -71,7 +72,7 @@
         line-height: 1;
         text-transform: lowercase;
     }
-
+ 
     .footer-logo-img {
         max-width: 120px;
         /* adjust based on your logo size */
@@ -79,19 +80,19 @@
         display: block;
         object-fit: contain;
     }
-
+ 
     .footer-newsletter-wrap {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
+ 
     .newsletter-form {
         max-width: 720px;
         /* controls the exact middle width */
         margin: 0 auto;
     }
-
+ 
     .newsletter-text,
     .mobile-text {
         width: 100%;
@@ -99,22 +100,22 @@
         text-align: left;
         /* keeps the text aligned like the screenshot */
     }
-
+ 
     @media (max-width: 991.98px) {
-
+ 
         .newsletter-text,
         .mobile-text {
             text-align: center;
         }
     }
-
+ 
     /* Newsletter section */
     .newsletter-text {
         color: #cfcfcf;
         font-size: 16px;
         margin-bottom: 16px;
     }
-
+ 
     .footer-input {
         height: 44px;
         background: #050505 !important;
@@ -124,17 +125,17 @@
         padding: 0 16px;
         box-shadow: none !important;
     }
-
+ 
     .footer-input::placeholder {
         color: #b7b7b7 !important;
     }
-
+ 
     .footer-input:focus {
         border-color: #7c3aed;
         background: #050505;
         color: #fff;
     }
-
+ 
     .footer-submit {
         height: 44px;
         min-width: 110px;
@@ -145,19 +146,19 @@
         font-weight: 600;
         transition: all 0.3s ease;
     }
-
+ 
     .footer-submit:hover {
         background: rgb(24, 243, 24);
         border-color: #7c3aed;
         color: #fff;
     }
-
+ 
     .mobile-text {
         color: #cfcfcf;
         font-size: 16px;
         margin: 22px 0 14px;
     }
-
+ 
     /* Store buttons */
     .store-btn {
         display: inline-flex;
@@ -171,17 +172,17 @@
         min-width: 150px;
         transition: transform 0.25s ease;
     }
-
+ 
     .store-btn:hover {
         transform: translateY(-2px);
         color: #000;
     }
-
+ 
     .store-btn i {
         font-size: 26px;
         line-height: 1;
     }
-
+ 
     .store-small {
         display: block;
         font-size: 10px;
@@ -189,7 +190,7 @@
         color: #555;
         margin-bottom: 2px;
     }
-
+ 
     .store-big {
         display: block;
         font-size: 20px;
@@ -197,22 +198,22 @@
         line-height: 1.1;
         color: #111;
     }
-
+ 
     /* Footer links */
     .footer-link {
         list-style: none;
         padding: 0;
         margin: 0;
     }
-
+ 
     .footer-brand-wrap .address {
         margin-top: 10px;
     }
-
+ 
     .address {
         margin-top: 25px;
     }
-
+ 
     .cinema-address-wrap {
         display: flex;
         align-items: flex-start;
@@ -220,7 +221,7 @@
         max-width: 280px;
         /* keeps it neat */
     }
-
+ 
     .address-icon {
         color: rgb(17, 236, 17);
         /* purple */
@@ -228,14 +229,14 @@
         margin-top: 20px;
         flex-shrink: 0;
     }
-
+ 
     .cinema-name {
         font-size: 30px;
         font-weight: 700;
         color: rgb(25, 255, 25);
         margin: 0;
     }
-
+ 
     .cinema-address {
         font-size: 20px;
         font-weight: 700;
@@ -243,11 +244,11 @@
         line-height: 1.5;
         margin-top: 20px;
     }
-
+ 
     .footer-link li {
         margin-bottom: 14px;
     }
-
+ 
     .footer-link a {
         color: #ffffff;
         text-decoration: none;
@@ -255,24 +256,24 @@
         font-weight: 500;
         transition: color 0.25s ease;
     }
-
+ 
     .footer-link a:hover {
         color: rgb(16, 241, 16);
     }
-
+ 
     .app-store-wrap {
         margin-top: 5px;
     }
-
+ 
     .store-img-link {
         display: inline-block;
         transition: transform 0.3s ease;
     }
-
+ 
     .store-img-link:hover {
         transform: translateY(-2px);
     }
-
+ 
     .store-badge {
         height: 42px;
         /* adjust if you want bigger/smaller */
@@ -280,7 +281,7 @@
         display: block;
         object-fit: contain;
     }
-
+ 
     /* Bottom copyright bar */
     .copyright-bar {
         margin-top: 48px;
@@ -292,37 +293,37 @@
         text-align: center;
         font-weight: 600;
     }
-
+ 
     /* Responsive spacing */
     @media (max-width: 991.98px) {
-
+ 
         .footer-brand-wrap,
         .footer-newsletter-wrap,
         .footer-links-wrap {
             margin-bottom: 35px;
         }
     }
-
+ 
     @media (max-width: 767.98px) {
         .cinema-footer {
             padding: 50px 0 20px;
         }
-
+ 
         .newsletter-text,
         .mobile-text {
             font-size: 15px;
         }
-
+ 
         .copyright-bar {
             font-size: 15px;
             padding: 16px 18px;
         }
     }
-
+ 
     .now-showing-section {
         background: #111111;
     }
-
+ 
     .now-showing-title {
         color: #ffffff;
         font-size: 5rem;
@@ -331,7 +332,7 @@
         margin-left: 9px;
         padding: 16px;
     }
-
+ 
     .movie-card {
         width: 100%;
         height: 290px;
@@ -340,7 +341,7 @@
         overflow: hidden;
         background: transparent;
     }
-
+ 
     .movie-poster {
         width: 100%;
         height: 100%;
@@ -350,46 +351,46 @@
         display: block;
         border-radius: 12px;
     }
-
+ 
     /* Tablet */
     @media (max-width: 991.98px) {
         .now-showing-title {
             font-size: 2.5rem;
         }
-
+ 
         .movie-card {
             height: 320px;
         }
     }
-
+ 
     /* Mobile */
     @media (max-width: 767.98px) {
         .now-showing-title {
             font-size: 2rem;
         }
-
+ 
         .movie-card {
             height: 260px;
         }
     }
-
-
+ 
+ 
     .movie-card {
         border-radius: 12px;
         cursor: pointer;
     }
-
+ 
     /* image styling */
     .movie-poster {
         border-radius: 12px;
         transition: transform 0.4s ease;
     }
-
+ 
     /* zoom image slightly on hover */
     .movie-card:hover .movie-poster {
         transform: scale(1.08);
     }
-
+ 
     /* overlay hidden by default */
     .movie-overlay {
         position: absolute;
@@ -400,24 +401,24 @@
         transition: all 0.3s ease;
         border-radius: 12px;
     }
-
+ 
     /* show overlay on hover */
     .movie-card:hover .movie-overlay {
         opacity: 1;
         transform: translateY(0);
     }
-
+ 
     .movie-overlay {
         backdrop-filter: blur(4px);
     }
-
-
+ 
+ 
     #trailerVideo {
         display: block;
         max-height: 75vh;
         object-fit: cover;
     }
-
+ 
     .movie-overlay {
         position: absolute;
         inset: 0;
@@ -426,13 +427,13 @@
         visibility: hidden;
         transition: 0.4s ease;
     }
-
+ 
     .movie-card:hover .movie-overlay {
         opacity: 1;
         visibility: visible;
     }
-
-
+ 
+ 
     .trailer-video {
         position: relative;
         width: 100%;
@@ -440,33 +441,579 @@
         margin: 0 auto;
         aspect-ratio: 16 / 9;
     }
-
+ 
     .trailer-video iframe {
         width: 100%;
         height: 100%;
         border: 0;
         display: block;
     }
-
+ 
     .modal-body .trailer-video {
         max-width: 100%;
     }
-
-
+ 
+ 
     .trailer-video {
         position: relative;
         width: 100%;
         aspect-ratio: 16 / 9;
     }
-
+ 
     .trailer-video iframe {
         width: 100%;
         height: 100%;
         border: 0;
         display: block;
     }
+ 
+    /* ============================================================
+       BOOKING MODAL — dynamic per-movie ticket + seat + food order
+       ============================================================ */
+    #ticketModal .modal-content {
+        background: #12131a;
+        border: 1px solid #2a2a35;
+        border-radius: 16px;
+    }
+ 
+    .booking-header {
+        background: linear-gradient(120deg, #1a0b33, #3a1466 60%, #6f2dbd);
+        padding: 22px 24px;
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        border-bottom: 1px solid #2a2a35;
+    }
+ 
+    .booking-header img {
+        width: 64px;
+        height: 90px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, .5);
+        flex-shrink: 0;
+    }
+ 
+    .booking-header-info h4 {
+        margin: 0 0 6px;
+        font-weight: 700;
+        font-size: 2.3rem;
+    }
+ 
+    .booking-header-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        font-size: 1.6rem;
+        color: #fefdff;
+    }
+ 
+    .booking-price-tag {
+        margin-left: auto;
+        text-align: right;
+        flex-shrink: 0;
+    }
+ 
+    .booking-price-tag small {
+        display: block;
+        color: #f3f3f5;
+        font-size: .68rem;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+    }
+ 
+    .booking-price-tag strong {
+        font-size: 1.75rem;
+        color: #d9a441;
+    }
+ 
+    .booking-section-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: .04em;
+        text-transform: uppercase;
+        color: #d9a441;
+        margin: 22px 0 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+ 
+    /* Seat map */
+    .seat-map-card {
+        background: #0b0c12;
+        border: 1px solid #23242e !important;
+        border-radius: 12px;
+        padding: 18px 14px;
+    }
+ 
+    .screen-indicator {
+        width: 100%;
+        text-align: center;
+        color: #f2f2f7;
+        font-size: .72rem;
+        letter-spacing: .15em;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    }
+ 
+    .screen-indicator::before {
+        content: "";
+        display: block;
+        height: 6px;
+        width: 70%;
+        margin: 0 auto 8px;
+        background: radial-gradient(ellipse at center, rgba(217, 164, 65, .55), transparent 70%);
+        border-radius: 50%;
+        filter: blur(1px);
+    }
+ 
+    .seat-map-scroll {
+        overflow-x: auto;
+        padding-bottom: 6px;
+    }
+ 
+    .seat-row {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 6px;
+        min-width: max-content;
+    }
+ 
+    .seat-row-label {
+        width: 20px;
+        flex-shrink: 0;
+        font-size: 1.4rem;
+        color: #ebebeb;
+        font-weight: 700;
+        text-align: center;
+    }
+ 
+    .seat-btn {
+        width: 27px;
+        height: 27px;
+        flex-shrink: 0;
+        border-radius: 6px 6px 8px 8px;
+        border: 1px solid #33354a !important;
+        background: #1b1c27;
+        color: #fbfbfc;
+        font-size: .62rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: .15s ease;
+    }
+ 
+    .seat-btn:hover {
+        border-color: #7c3aed !important;
+        color: #fff;
+    }
+ 
+    .seat-btn.selected {
+        background: linear-gradient(160deg, #d9a441, #b8842b);
+        border-color: #d9a441;
+        color: #1a1204;
+        font-weight: 700;
+        box-shadow: 0 0 0 2px rgba(217, 164, 65, .25);
+    }
+ 
+    .seat-legend {
+        display: flex;
+        gap: 18px;
+        margin-top: 14px;
+        font-size: .74rem;
+        color: #eaebee;
+        flex-wrap: wrap;
+    }
+ 
+    .seat-legend span {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+ 
+    .legend-box {
+        width: 14px;
+        height: 14px;
+        border-radius: 4px;
+        display: inline-block;
+    }
+ 
+    .legend-box.available {
+        background: #1b1c27;
+        border: 1px solid #33354a;
+    }
+ 
+    .legend-box.selected {
+        background: linear-gradient(160deg, #d9a441, #b8842b);
+    }
+ 
+    .selected-seats-summary {
+        margin-top: 14px;
+        background: #151621;
+        border-radius: 8px;
+        padding: 10px 14px;
+        font-size: .84rem;
+        color: #cfd0dd;
+    }
+ 
+    /* Food & drinks menu */
+    .food-menu-card {
+        background: #0b0c12;
+        border: 1px solid #23242e;
+        border-radius: 12px;
+        padding: 4px 16px;
+        max-height: 260px;
+        overflow-y: auto;
+    }
+ 
+    .food-cat-title {
+        color: #a06bff;
+        font-weight: 700;
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: .06em;
+        margin: 14px 0 6px;
+    }
+ 
+    .food-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        padding: 9px 0;
+        border-bottom: 1px solid #1c1d28;
+    }
+ 
+    .food-item:last-child {
+        border-bottom: none;
+    }
+ 
+    .food-item-name {
+        display: block;
+        font-size: 1.6rem;
+        color: #f1f1f6;
+    }
+ 
+    .food-item-price {
+        display: block;
+        font-size: 1.6rem;
+        color: #8b8fa3;
+    }
+ 
+    .food-stepper {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+    }
+ 
+    .step-btn {
+        width: 27px;
+        height: 27px;
+        border-radius: 50%;
+        border: 1px solid #3a3c4d;
+        background: #1b1c27;
+        color: #fff;
+        font-size: 1rem;
+        line-height: 1;
+        cursor: pointer;
+    }
+ 
+    .step-btn:hover {
+        border-color: #d9a441;
+        color: #d9a441;
+    }
+ 
+    .qty-val {
+        min-width: 16px;
+        text-align: center;
+        font-weight: 700;
+    }
+ 
+    /* Total bar */
+    .booking-total-bar {
+        background: #0b0c12;
+        border: 1px solid #23242e;
+        border-radius: 12px;
+        padding: 16px 18px;
+        margin-top: 22px;
+    }
+ 
+    .booking-total-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.6rem;
+        color: #aeb0c4;
+        margin-bottom: 6px;
+    }
+ 
+    .booking-total-row.grand {
+        font-size: 1.6rem;
+        font-weight: bolder;
+        color: #d9a441;
+        border-top: 1px solid #23242e;
+        padding-top: 10px;
+        margin-top: 8px;
+    }
+ 
+    .booking-form-input {
+        background: #0b0c12 !important;
+        border: 1px solid #2a2a35 !important;
+        color: #fff !important;
+        padding: 15px !important;
+    }
+ 
+    .booking-form-input::placeholder {
+        color: #e6e7ec !important;
+    }
+ 
+    .booking-form-input:focus {
+        border-color: #7c3aed !important;
+        box-shadow: 0 0 0 .2rem rgba(124, 58, 237, .2) !important;
+    }
+ 
+    .btn-confirm-booking {
+        background: linear-gradient(120deg, #7c3aed, #5b21b6);
+        border: none;
+        font-weight: 700;
+        letter-spacing: .03em;
+    }
+ 
+    .btn-confirm-booking:hover {
+        background: linear-gradient(120deg, #8b4bff, #6d2ed8);
+        color: #fff;
+    }
+ 
+    /* ============================================================
+       PAYMENT MODAL — choose WhatsApp (agent-assisted) or Flutterwave
+       ============================================================ */
+    #paymentModal .modal-content {
+        background: #12131a;
+        border: 1px solid #2a2a35;
+        border-radius: 16px;
+    }
+ 
+    .payment-header {
+        background: linear-gradient(120deg, #1a0b33, #3a1466 60%, #6f2dbd);
+        padding: 20px 24px;
+        border-bottom: 1px solid #2a2a35;
+    }
+ 
+    .payment-header h4 {
+        margin: 0;
+        font-weight: 700;
+    }
+ 
+    .payment-order-summary {
+        background: #0b0c12;
+        border: 1px solid #23242e;
+        border-radius: 12px;
+        padding: 14px 18px;
+        margin-bottom: 20px;
+        font-size: 1.6rem;
+        color: #cfd0dd;
+    }
+ 
+    .payment-order-summary .row-line {
+        display: flex;
+        justify-content: space-between;
+        padding: 4px 0;
+    }
+ 
+    .payment-order-summary .row-line.total {
+        margin-top: 8px;
+        padding-top: 10px;
+        border-top: 1px solid #23242e;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #d9a441;
+    }
+ 
+    .payment-option {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        background: #0b0c12;
+        border: 1px solid #23242e;
+        border-radius: 12px;
+        padding: 16px 18px;
+        margin-bottom: 14px;
+        cursor: pointer;
+        transition: .18s ease;
+        width: 100%;
+        text-align: left;
+        color: #fff;
+    }
+ 
+    .payment-option:hover {
+        border-color: #7c3aed;
+        background: #14151f;
+    }
+ 
+    .payment-option-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        flex-shrink: 0;
+    }
+ 
+    .payment-option-icon.whatsapp {
+        background: rgba(37, 211, 102, .15);
+        color: #25d366;
+    }
+ 
+    .payment-option-icon.flutterwave {
+        background: rgba(255, 178, 46, .15);
+        color: #ffb22e;
+        font-weight: 800;
+        font-size: 1.6rem;
+    }
+ 
+    .payment-option-text strong {
+        display: block;
+        font-size: 1.5rem;
+    }
+ 
+    .payment-option-text span {
+        display: block;
+        font-size: 1.6rem;
+        color: #8b8fa3;
+        margin-top: 2px;
+    }
+ 
+    .payment-option-arrow {
+        margin-left: auto;
+        color: #666a7d;
+        flex-shrink: 0;
+    }
+ 
+    .whatsapp-confirm-step {
+        background: #0b0c12;
+        border: 1px dashed #25d366;
+        border-radius: 12px;
+        padding: 16px 18px;
+        margin-top: 4px;
+        font-size: 1.4rem;
+        color: #cfd0dd;
+    }
+ 
+    .whatsapp-confirm-step .btn-issue-ticket {
+        background: #25d366;
+        border: none;
+        color: #06210f;
+        font-weight: 700;
+        margin-top: 10px;
+    }
+ 
+    .whatsapp-confirm-step .btn-issue-ticket:hover {
+        background: #2fe578;
+        color: #06210f;
+    }
+ 
+    /* ============================================================
+       TICKET RECEIPT — printable ticket stub with QR confirmation
+       ============================================================ */
+    #receiptModal .modal-content {
+        background: transparent;
+        border: none;
+    }
+ 
+    .ticket-stub {
+        background: #fff;
+        color: #12131a;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, .5);
+    }
+ 
+    .ticket-stub-top {
+        background: linear-gradient(120deg, #1a0b33, #3a1466 60%, #6f2dbd);
+        color: #fff;
+        padding: 22px 24px 26px;
+        text-align: center;
+    }
+ 
+    .ticket-stub-top h3 {
+        margin: 4px 0 0;
+        font-weight: 800;
+        letter-spacing: .03em;
+    }
+ 
+    .ticket-stub-top small {
+        color: #d9c9f5;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+        font-size: .68rem;
+    }
+ 
+    .ticket-perforation {
+        position: relative;
+        height: 2px;
+        background-image: radial-gradient(circle, #111 3px, transparent 3px);
+        background-size: 16px 4px;
+        background-repeat: repeat-x;
+        background-position: center;
+    }
+ 
+    .ticket-stub-body {
+        padding: 18px 26px 4px;
+    }
+ 
+    .ticket-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 14px;
+        padding: 9px 0;
+        border-bottom: 1px dashed #e3e3e8;
+        font-size: 1.4rem;
+    }
+ 
+    .ticket-row:last-child {
+        border-bottom: none;
+    }
+ 
+    .ticket-row .label {
+        color: #7a7a86;
+        font-weight: 600;
+        flex-shrink: 0;
+    }
+ 
+    .ticket-row .value {
+        color: #12131a;
+        font-weight: 700;
+        text-align: right;
+    }
+ 
+    .ticket-qr-wrap {
+        text-align: center;
+        padding: 18px 26px 26px;
+    }
+ 
+    .ticket-qr-wrap #qrcode {
+        display: inline-block;
+        padding: 10px;
+        background: #fff;
+        border: 1px solid #eee;
+        border-radius: 10px;
+    }
+ 
+    .ticket-ref-note {
+        text-align: center;
+        font-size: 1.6rem;
+        letter-spacing: .08em;
+        color: #9a9aa5;
+        text-transform: uppercase;
+        margin-top: 8px;
+    }
 </style>
-
+ 
 <body>
     <!-- <nav>
         <a class="logo" href="#"><img src="./img/logo cinema grill.png" alt=""></a>
@@ -484,11 +1031,11 @@
         <button class="menu-toggle" id="menuToggle">
             ☰
         </button>
-
+ 
         <ul class="nav-links" id="navLinks">
             <li><a href="#">Home</a></li>
             <li class="nav-links">
-                <a class="nav-links" href="#" data-bs-toggle="modal" data-bs-target="#ticketModal">
+                <a class="nav-links" href="#" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="setCurrentMovie(this.closest('[data-movie-id]')?.dataset.movieId)">
                     Buy Ticket
                 </a>
             </li>
@@ -497,21 +1044,21 @@
             <li><a href="#">Contact</a></li> -->
     <!-- </ul>
     </nav> -->
-
-
+ 
+ 
     <nav class="navbar">
         <a class="logo" href="#">
             <img src="./img/logo cinema grill.png" alt="Logo">
         </a>
-
+ 
         <button class="menu-toggle" id="menuToggle">
             ☰
         </button>
-
+ 
         <ul class="nav-links" id="navLinks">
             <li><a href="./dashboard.html">Home</a></li>
             <li>
-                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal">
+                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="setCurrentMovie(this.closest('[data-movie-id]')?.dataset.movieId)">
                     Buy Ticket
                 </a>
             </li>
@@ -540,132 +1087,132 @@
             <option value="Port Harcourt">PH-city-coming soon</option>
             <option value="Port Harcourt">Enugu-coming soon</option>
         </select>
-
+ 
         <!-- <button onclick="searchLocation()" class="btn23">Search</button> -->
-
+ 
         <section class="video-carousel">
-
+ 
             <div class="carousel">
-
+ 
                 <!-- Slide 1 -->
-                <div class="slide active">
+                <div class="slide active" data-movie-id="ride_or_die">
                     <video autoplay muted loop playsinline>
                         <source src="./videos/movie advert.mp4" type="video/mp4">
                     </video>
-
+ 
                     <div class="content">
                         <h1 class="">Ride or Die</h1>
                         <p class="">Trailer</p>
                         <h3 class="">Show time: <Span class="text-primary fw-bold">2PM / 3PM</Span></h3>
-                        <a href="/detail2.html?modal" data-bs-toggle="modal" data-bs-target="#ticketModal"
+                        <a href="/detail2.html?modal" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="setCurrentMovie(this.closest('[data-movie-id]')?.dataset.movieId)"
                             class="btn btn-success btn-lg rounded-pill mt-2">
                             Buy Ticket
                         </a>
                     </div>
                 </div>
-
+ 
                 <!-- Slide 2 -->
-                <div class="slide">
+                <div class="slide" data-movie-id="the_bluff">
                     <video autoplay muted loop playsinline>
                         <source src="./videos/OFFICIAL TRAILER - The Bluff _ AGBO.mp4" type="video/mp4">
                     </video>
-
+ 
                     <div class="content">
                         <h1>The Bluff</h1>
                         <p>Cinematic Trailer</p>
-                        <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal">
+                        <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="setCurrentMovie(this.closest('[data-movie-id]')?.dataset.movieId)">
                             Buy Ticket
                         </a>
                     </div>
                 </div>
-
+ 
                 <!-- Slide 3 -->
-                <div class="slide">
+                <div class="slide" data-movie-id="smile">
                     <video autoplay muted loop playsinline>
                         <source src="./videos/advertvideothree.mp4" type="video/mp4">
                     </video>
-
+ 
                     <div class="content">
                         <h1>Smile</h1>
                         <p>Official Trailer</p>
-                        <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal"
+                        <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="setCurrentMovie(this.closest('[data-movie-id]')?.dataset.movieId)"
                             class="btn btn-success btn-lg rounded-pill mt-2">
                             Buy Ticket
                         </a>
                     </div>
                 </div>
-
+ 
                 <!-- Slide 4 -->
-                <div class="slide">
+                <div class="slide" data-movie-id="woman_king">
                     <video autoplay muted loop playsinline>
                         <source src="/videos/THE WOMAN KING – Official Trailer (HD).mp4" type="video/mp4">
                     </video>
-
+ 
                     <div class="content">
                         <h1>The Woman King</h1>
                         <p>Official Trailer</p>
-                        <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal">
+                        <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="setCurrentMovie(this.closest('[data-movie-id]')?.dataset.movieId)">
                             Buy Ticket
                         </a>
                     </div>
                 </div>
-
-
+ 
+ 
                 <!-- Slide 5 -->
-                <div class="slide">
+                <div class="slide" data-movie-id="alien_predator">
                     <video autoplay muted loop playsinline>
                         <source
                             src="/videos/RAID_ Shadow Legends x Alien & Predator _ Deadly Cargo (Official Commercial).mp4"
                             type="video/mp4">
                     </video>
-
+ 
                     <div class="content">
                         <h1>Alien Predator</h1>
                         <p>Official Trailer</p>
-                        <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal">
+                        <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="setCurrentMovie(this.closest('[data-movie-id]')?.dataset.movieId)">
                             Buy Ticket
                         </a>
                     </div>
                 </div>
-
+ 
                 <!-- Slide 6 -->
-                <div class="slide">
+                <div class="slide" data-movie-id="apocalypto">
                     <video autoplay muted loop playsinline>
                         <source src="/videos/Apocalypto - Official® Trailer [HD].mp4" type="video/mp4">
                     </video>
-
+ 
                     <div class="content">
                         <h1>Apocalypto</h1>
                         <p>Official Trailer</p>
-                        <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal">
+                        <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="setCurrentMovie(this.closest('[data-movie-id]')?.dataset.movieId)">
                             Buy Ticket
                         </a>
                     </div>
                 </div>
-
+ 
                 <!-- Buttons -->
                 <button class="prev">&#10094;</button>
                 <button class="next">&#10095;</button>
-
+ 
             </div>
         </section>
-
-
+ 
+ 
         <section class="now-showing-section py-5">
             <div class="container-fluid px-lg-4 px-3">
                 <h2 class="now-showing-title mb-4">Now Showing</h2>
-
+ 
                 <div class="row g-3 g-lg-4 now-showing-row">
                     <div class="col-6 col-md-4 col-lg-2">
-                        <div class="movie-card position-relative overflow-hidden">
-
+                        <div class="movie-card position-relative overflow-hidden" data-movie-id="ride_or_die">
+ 
                             <img src="https://m.media-amazon.com/images/M/MV5BMGUxMjFkMDEtNGJkZC00MTUwLWFiZjUtYWZhZWYxNzE1ZDEwXkEyXkFqcGc@._V1_FMjpg_UX898_.jpg"
                                 alt="The Herd" class="img-fluid movie-poster w-100">
-
+ 
                             <!-- Hover Overlay -->
                             <div
                                 class="movie-overlay d-flex flex-column justify-content-center align-items-center text-center p-3">
-
+ 
                                 <!-- Play Trailer -->
                                 <button class="btn btn-dark btn-sm rounded-pill mb-2 play-trailer-btn fs-3 w-100"
                                     data-bs-toggle="modal" data-bs-target="#trailerModal"
@@ -673,38 +1220,38 @@
                                     data-title="Ride or Die Trailer">
                                     ▶ Play Trailer
                                 </button>
-
+ 
                                 <!-- Title + Duration -->
                                 <h5 class="text-white mb-1 fs-3">RIDE OR DIE</h5>
                                 <small class="text-light mb-3 fs-3">
                                     Time: 2pm to 3:30pm
                                 </small>
-
+ 
                                 <!-- Buttons -->
-                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal"
+                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="setCurrentMovie(this.closest('[data-movie-id]')?.dataset.movieId)"
                                     class="btn btn-primary btn-sm mb-2 fs-3 w-100">
                                     Buy Ticket
                                 </a>
-
+ 
                                 <a href="/detail2.html"
                                     class="text-white text-decoration-none text-center fw-bold fs-3">
                                     More Info →
                                 </a>
-
+ 
                             </div>
                         </div>
                     </div>
-
+ 
                     <div class="col-6 col-md-4 col-lg-2">
-                        <div class="movie-card position-relative overflow-hidden">
-
+                        <div class="movie-card position-relative overflow-hidden" data-movie-id="the_bluff">
+ 
                             <img src="https://i.pinimg.com/control1/736x/63/c0/bc/63c0bc4605bfff1f894ee2f7be1c424c.jpg"
                                 alt="The Herd" class="img-fluid movie-poster w-100">
-
+ 
                             <!-- Hover Overlay -->
                             <div
                                 class="movie-overlay d-flex flex-column justify-content-center align-items-center text-center p-3">
-
+ 
                                 <!-- Play Trailer -->
                                 <button class="btn btn-dark btn-sm rounded-pill mb-2 play-trailer-btn fs-3 w-100"
                                     data-bs-toggle="modal" data-bs-target="#trailerModal"
@@ -712,39 +1259,39 @@
                                     data-title="The Bluff Trailer">
                                     ▶ Play Trailer
                                 </button>
-
+ 
                                 <!-- Title + Duration -->
                                 <h5 class="text-white mb-1 fs-3">title: THE BLUFF</h5>
                                 <small class="text-light mb-3 fs-3">
                                     Time: 4pm to 5:30pm
                                 </small>
-
+ 
                                 <!-- Buttons -->
-                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal"
+                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="setCurrentMovie(this.closest('[data-movie-id]')?.dataset.movieId)"
                                     class="btn btn-primary btn-sm mb-2 fs-3 w-100">
                                     Buy Ticket
                                 </a>
-
+ 
                                 <a href="./detail1.html"
                                     class="text-white text-decoration-none text-center fw-bold fs-3">
                                     More Info →
                                 </a>
-
+ 
                             </div>
                         </div>
                     </div>
-
-
+ 
+ 
                     <div class="col-6 col-md-4 col-lg-2">
-                        <div class="movie-card position-relative overflow-hidden">
-
+                        <div class="movie-card position-relative overflow-hidden" data-movie-id="smile">
+ 
                             <img src="https://m.media-amazon.com/images/M/MV5BNjFhMzBlNzktMjE2Ni00YTMyLWI2YWUtYmM1N2QxMDQwZmZhXkEyXkFqcGc@._V1_QL75_UX180_CR0,0,180,266_.jpg"
                                 alt="The Herd" class="img-fluid movie-poster w-100">
-
+ 
                             <!-- Hover Overlay -->
                             <div
                                 class="movie-overlay d-flex flex-column justify-content-center align-items-center text-center p-3">
-
+ 
                                 <!-- Play Trailer -->
                                 <button class="btn btn-dark btn-sm rounded-pill mb-2 play-trailer-btn fs-3 w-100"
                                     data-bs-toggle="modal" data-bs-target="#trailerModal"
@@ -752,39 +1299,39 @@
                                     data-title="The Smile Trailer">
                                     ▶ Play Trailer
                                 </button>
-
+ 
                                 <!-- Title + Duration -->
                                 <h5 class="text-white mb-1 fs-3">title: SMILE</h5>
                                 <small class="text-light mb-3 fs-3">
                                     Time: 6pm to 7pm
                                 </small>
-
+ 
                                 <!-- Buttons -->
-                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal"
+                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="setCurrentMovie(this.closest('[data-movie-id]')?.dataset.movieId)"
                                     class="btn btn-primary btn-sm mb-2 fs-3 w-100">
                                     Buy Ticket
                                 </a>
-
+ 
                                 <a href="./detail3.html"
                                     class="text-white text-decoration-none text-center fw-bold fs-3">
                                     More Info →
                                 </a>
-
+ 
                             </div>
                         </div>
                     </div>
-
-
+ 
+ 
                     <div class="col-6 col-md-4 col-lg-2">
-                        <div class="movie-card position-relative overflow-hidden">
-
+                        <div class="movie-card position-relative overflow-hidden" data-movie-id="woman_king">
+ 
                             <img src="https://i.pinimg.com/736x/67/78/e5/6778e5c46ea55b6dac442747f1f7ccf0.jpg"
                                 alt="The Herd" class="img-fluid movie-poster w-100">
-
+ 
                             <!-- Hover Overlay -->
                             <div
                                 class="movie-overlay d-flex flex-column justify-content-center align-items-center text-center p-3">
-
+ 
                                 <!-- Play Trailer -->
                                 <button class="btn btn-dark btn-sm rounded-pill mb-2 play-trailer-btn fs-3 w-100"
                                     data-bs-toggle="modal" data-bs-target="#trailerModal"
@@ -792,39 +1339,39 @@
                                     data-title="The Woman King Trailer">
                                     ▶ Play Trailer
                                 </button>
-
+ 
                                 <!-- Title + Duration -->
                                 <h5 class="text-white mb-1 fs-3">tile: THE WOMAN KING</h5>
                                 <small class="text-light mb-3 fs-3">
                                     ⏱ 1h 46m
                                 </small>
-
+ 
                                 <!-- Buttons -->
-                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal"
+                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="setCurrentMovie(this.closest('[data-movie-id]')?.dataset.movieId)"
                                     class="btn btn-primary btn-sm mb-2 fs-3 w-100">
                                     Buy Ticket
                                 </a>
-
+ 
                                 <a href="./detail4.html"
                                     class="text-white text-decoration-none text-center fw-bold fs-3">
                                     More Info →
                                 </a>
-
+ 
                             </div>
                         </div>
                     </div>
-
-
+ 
+ 
                     <div class="col-6 col-md-4 col-lg-2">
-                        <div class="movie-card position-relative overflow-hidden">
-
+                        <div class="movie-card position-relative overflow-hidden" data-movie-id="alien_predator">
+ 
                             <img src="https://i.pinimg.com/736x/5b/24/80/5b2480f098b2b76caa1fa5313558fab4.jpg"
                                 alt="The Herd" class="img-fluid movie-poster w-100">
-
+ 
                             <!-- Hover Overlay -->
                             <div
                                 class="movie-overlay d-flex flex-column justify-content-center align-items-center text-center p-3">
-
+ 
                                 <!-- Play Trailer -->
                                 <button class="btn btn-dark btn-sm rounded-pill mb-2 play-trailer-btn fs-3 w-100"
                                     data-bs-toggle="modal" data-bs-target="#trailerModal"
@@ -832,38 +1379,38 @@
                                     data-title="The Alien Predator Trailer">
                                     ▶ Play Trailer
                                 </button>
-
+ 
                                 <!-- Title + Duration -->
                                 <h5 class="text-white mb-1 fs-3">title: ALIEN PREDATOR</h5>
                                 <small class="text-light mb-3 fs-3">
                                     ⏱ 1h 46m
                                 </small>
-
+ 
                                 <!-- Buttons -->
-                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal"
+                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="setCurrentMovie(this.closest('[data-movie-id]')?.dataset.movieId)"
                                     class="btn btn-primary btn-sm mb-2 fs-3 w-100">
                                     Buy Ticket
                                 </a>
-
+ 
                                 <a href="/detail5.html"
                                     class="text-white text-decoration-none text-center fw-bold fs-3">
                                     More Info →
                                 </a>
-
+ 
                             </div>
                         </div>
                     </div>
-
+ 
                     <div class="col-6 col-md-4 col-lg-2">
-                        <div class="movie-card position-relative overflow-hidden">
-
+                        <div class="movie-card position-relative overflow-hidden" data-movie-id="apocalypto">
+ 
                             <img src="https://i.pinimg.com/736x/5e/d6/dc/5ed6dcd46906e9eae3a3189e91a49dcc.jpg"
                                 alt="The Herd" class="img-fluid movie-poster w-100">
-
+ 
                             <!-- Hover Overlay -->
                             <div
                                 class="movie-overlay d-flex flex-column justify-content-center align-items-center text-center p-3">
-
+ 
                                 <!-- Play Trailer -->
                                 <button class="btn btn-dark btn-sm rounded-pill mb-2 play-trailer-btn fs-3 w-100"
                                     data-bs-toggle="modal" data-bs-target="#trailerModal"
@@ -871,45 +1418,45 @@
                                     data-title="The APOCALYPTO Trailer">
                                     ▶ Play Trailer
                                 </button>
-
+ 
                                 <!-- Title + Duration -->
                                 <h5 class="text-white mb-1 fs-3">title: APOCALYPTO</h5>
                                 <small class="text-light mb-3 fs-3">
                                     ⏱ 1h 46m
                                 </small>
-
+ 
                                 <!-- Buttons -->
-                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal"
+                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="setCurrentMovie(this.closest('[data-movie-id]')?.dataset.movieId)"
                                     class="btn btn-primary btn-sm mb-2 fs-3 w-100">
                                     Buy Ticket
                                 </a>
-
+ 
                                 <a href="/detail6.html"
                                     class="text-white text-decoration-none text-center fw-bold fs-3">
                                     More Info →
                                 </a>
-
+ 
                             </div>
                         </div>
                     </div>
-
+ 
                 </div>
-
-
+ 
+ 
                 <h2 class="now-showing-title mb-4">Coming Soon</h2>
-
-
+ 
+ 
                 <div class="row g-3 g-lg-4 now-showing-row">
                     <div class="col-6 col-md-4 col-lg-2">
-                        <div class="movie-card position-relative overflow-hidden">
-
+                        <div class="movie-card position-relative overflow-hidden" data-movie-id="avatar">
+ 
                             <img src="https://i.pinimg.com/736x/f3/e3/3d/f3e33d9361bb4986b75645df7c29cd26.jpg"
                                 alt="The Herd" class="img-fluid movie-poster w-100">
-
+ 
                             <!-- Hover Overlay -->
                             <div
                                 class="movie-overlay d-flex flex-column justify-content-center align-items-center text-center p-3">
-
+ 
                                 <!-- Play Trailer -->
                                 <button class="btn btn-dark btn-sm rounded-pill mb-2 play-trailer-btn fs-3 w-100"
                                     data-bs-toggle="modal" data-bs-target="#trailerModal"
@@ -917,38 +1464,38 @@
                                     data-title="The Herd Trailer">
                                     ▶ Play Trailer
                                 </button>
-
+ 
                                 <!-- Title + Duration -->
                                 <h5 class="text-white mb-1 fs-3">title: AVATAR</h5>
                                 <small class="text-light mb-3 fs-3">
                                     ⏱ 1h 46m
                                 </small>
-
+ 
                                 <!-- Buttons -->
-                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal"
+                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="setCurrentMovie(this.closest('[data-movie-id]')?.dataset.movieId)"
                                     class="btn btn-primary btn-sm mb-2 fs-3 w-100">
                                     Buy Ticket
                                 </a>
-
+ 
                                 <a href="#" class="text-white text-decoration-none text-center fw-bold fs-3">
                                     More Info →
                                 </a>
-
+ 
                             </div>
                         </div>
                     </div>
-
-
+ 
+ 
                     <div class="col-6 col-md-4 col-lg-2">
-                        <div class="movie-card position-relative overflow-hidden">
-
+                        <div class="movie-card position-relative overflow-hidden" data-movie-id="van_helsing_2">
+ 
                             <img src="https://i.pinimg.com/736x/90/27/d7/9027d7410f2bfbdc2bf9dc14d7e419b6.jpg"
                                 alt="The Herd" class="img-fluid movie-poster w-100">
-
+ 
                             <!-- Hover Overlay -->
                             <div
                                 class="movie-overlay d-flex flex-column justify-content-center align-items-center text-center p-3">
-
+ 
                                 <!-- Play Trailer -->
                                 <button class="btn btn-dark btn-sm rounded-pill mb-2 play-trailer-btn fs-3 w-100"
                                     data-bs-toggle="modal" data-bs-target="#trailerModal"
@@ -956,38 +1503,38 @@
                                     data-title="The Herd Trailer">
                                     ▶ Play Trailer
                                 </button>
-
+ 
                                 <!-- Title + Duration -->
                                 <h5 class="text-white mb-1 fs-3">title: VAN HELSING 2</h5>
                                 <small class="text-light mb-3 fs-3">
                                     ⏱ 1h 46m
                                 </small>
-
+ 
                                 <!-- Buttons -->
-                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal"
+                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="setCurrentMovie(this.closest('[data-movie-id]')?.dataset.movieId)"
                                     class="btn btn-primary btn-sm mb-2 fs-3 w-100">
                                     Buy Ticket
                                 </a>
-
+ 
                                 <a href="#" class="text-white text-decoration-none text-center fw-bold fs-3">
                                     More Info →
                                 </a>
-
+ 
                             </div>
                         </div>
                     </div>
-
-
+ 
+ 
                     <div class="col-6 col-md-4 col-lg-2">
-                        <div class="movie-card position-relative overflow-hidden">
-
+                        <div class="movie-card position-relative overflow-hidden" data-movie-id="riddick_4">
+ 
                             <img src="https://i.pinimg.com/736x/c6/0a/a0/c60aa057e50daa20df30ba655ab08d4d.jpg"
                                 alt="The Herd" class="img-fluid movie-poster w-100">
-
+ 
                             <!-- Hover Overlay -->
                             <div
                                 class="movie-overlay d-flex flex-column justify-content-center align-items-center text-center p-3">
-
+ 
                                 <!-- Play Trailer -->
                                 <button class="btn btn-dark btn-sm rounded-pill mb-2 play-trailer-btn fs-3 w-100"
                                     data-bs-toggle="modal" data-bs-target="#trailerModal"
@@ -995,37 +1542,37 @@
                                     data-title="The Herd Trailer">
                                     ▶ Play Trailer
                                 </button>
-
+ 
                                 <!-- Title + Duration -->
                                 <h5 class="text-white mb-1 fs-3">title: RIDDICK 4</h5>
                                 <small class="text-light mb-3 fs-3">
                                     ⏱ 1h 46m
                                 </small>
-
+ 
                                 <!-- Buttons -->
-                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal"
+                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="setCurrentMovie(this.closest('[data-movie-id]')?.dataset.movieId)"
                                     class="btn btn-primary btn-sm mb-2 fs-3 w-100">
                                     Buy Ticket
                                 </a>
-
+ 
                                 <a href="#" class="text-white text-decoration-none text-center fw-bold fs-3">
                                     More Info →
                                 </a>
-
+ 
                             </div>
                         </div>
                     </div>
-
+ 
                     <div class="col-6 col-md-4 col-lg-2">
-                        <div class="movie-card position-relative overflow-hidden">
-
+                        <div class="movie-card position-relative overflow-hidden" data-movie-id="scorpion_king">
+ 
                             <img src="https://i.pinimg.com/736x/10/9c/2c/109c2c5bfc904da7f0fd30fc5945bed5.jpg"
                                 alt="The Herd" class="img-fluid movie-poster w-100">
-
+ 
                             <!-- Hover Overlay -->
                             <div
                                 class="movie-overlay d-flex flex-column justify-content-center align-items-center text-center p-3">
-
+ 
                                 <!-- Play Trailer -->
                                 <button class="btn btn-dark btn-sm rounded-pill mb-2 play-trailer-btn fs-3 w-100"
                                     data-bs-toggle="modal" data-bs-target="#trailerModal"
@@ -1033,38 +1580,38 @@
                                     data-title="The Herd Trailer">
                                     ▶ Play Trailer
                                 </button>
-
+ 
                                 <!-- Title + Duration -->
                                 <h5 class="text-white mb-1 fs-3">title: THE SCORPION KING</h5>
                                 <small class="text-light mb-3 fs-3">
                                     ⏱ 1h 46m
                                 </small>
-
+ 
                                 <!-- Buttons -->
-                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal"
+                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="setCurrentMovie(this.closest('[data-movie-id]')?.dataset.movieId)"
                                     class="btn btn-primary btn-sm mb-2 fs-3 w-100">
                                     Buy Ticket
                                 </a>
-
+ 
                                 <a href="#" class="text-white text-decoration-none text-center fw-bold fs-3">
                                     More Info →
                                 </a>
-
+ 
                             </div>
                         </div>
                     </div>
-
-
+ 
+ 
                     <div class="col-6 col-md-4 col-lg-2">
-                        <div class="movie-card position-relative overflow-hidden">
-
+                        <div class="movie-card position-relative overflow-hidden" data-movie-id="tango_cash">
+ 
                             <img src="https://i.pinimg.com/736x/9b/68/24/9b6824ce5667e8cd59babe5231b3a7d1.jpg"
                                 alt="The Herd" class="img-fluid movie-poster w-100">
-
+ 
                             <!-- Hover Overlay -->
                             <div
                                 class="movie-overlay d-flex flex-column justify-content-center align-items-center text-center p-3">
-
+ 
                                 <!-- Play Trailer -->
                                 <button class="btn btn-dark btn-sm rounded-pill mb-2 play-trailer-btn fs-3 w-100"
                                     data-bs-toggle="modal" data-bs-target="#trailerModal"
@@ -1072,37 +1619,37 @@
                                     data-title="The Herd Trailer">
                                     ▶ Play Trailer
                                 </button>
-
+ 
                                 <!-- Title + Duration -->
                                 <h5 class="text-white mb-1 fs-3">title: TANGO & CASH</h5>
                                 <small class="text-light mb-3 fs-3">
                                     ⏱ 1h 46m
                                 </small>
-
+ 
                                 <!-- Buttons -->
-                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal"
+                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="setCurrentMovie(this.closest('[data-movie-id]')?.dataset.movieId)"
                                     class="btn btn-primary btn-sm mb-2 fs-3 w-100">
                                     Buy Ticket
                                 </a>
-
+ 
                                 <a href="#" class="text-white text-decoration-none text-center fw-bold fs-3">
                                     More Info →
                                 </a>
-
+ 
                             </div>
                         </div>
                     </div>
-
+ 
                     <div class="col-6 col-md-4 col-lg-2">
-                        <div class="movie-card position-relative overflow-hidden">
-
+                        <div class="movie-card position-relative overflow-hidden" data-movie-id="van_damme">
+ 
                             <img src="https://i.pinimg.com/736x/3b/38/ac/3b38acde1167414934f820ef1b963b40.jpg"
                                 alt="The Herd" class="img-fluid movie-poster w-100">
-
+ 
                             <!-- Hover Overlay -->
                             <div
                                 class="movie-overlay d-flex flex-column justify-content-center align-items-center text-center p-3">
-
+ 
                                 <!-- Play Trailer -->
                                 <button class="btn btn-dark btn-sm rounded-pill mb-2 play-trailer-btn fs-3 w-100"
                                     data-bs-toggle="modal" data-bs-target="#trailerModal"
@@ -1110,39 +1657,39 @@
                                     data-title="The Herd Trailer">
                                     ▶ Play Trailer
                                 </button>
-
+ 
                                 <!-- Title + Duration -->
                                 <h5 class="text-white mb-1 fs-3">title: VAM DAMME</h5>
                                 <small class="text-light mb-3 fs-3">
                                     ⏱ 1h 46m
                                 </small>
-
+ 
                                 <!-- Buttons -->
-                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal"
+                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="setCurrentMovie(this.closest('[data-movie-id]')?.dataset.movieId)"
                                     class="btn btn-primary btn-sm mb-2 fs-3 w-100">
                                     Buy Ticket
                                 </a>
-
+ 
                                 <a href="#" class="text-white text-decoration-none text-center fw-bold fs-3">
                                     More Info →
                                 </a>
-
+ 
                             </div>
                         </div>
                     </div>
-
-
-
+ 
+ 
+ 
                     <div class="col-6 col-md-4 col-lg-2">
-                        <div class="movie-card position-relative overflow-hidden">
-
+                        <div class="movie-card position-relative overflow-hidden" data-movie-id="the_007">
+ 
                             <img src="https://i.pinimg.com/736x/65/c8/8f/65c88fd85717aad306cef942bda22218.jpg"
                                 alt="The Herd" class="img-fluid movie-poster w-100">
-
+ 
                             <!-- Hover Overlay -->
                             <div
                                 class="movie-overlay d-flex flex-column justify-content-center align-items-center text-center p-3">
-
+ 
                                 <!-- Play Trailer -->
                                 <button class="btn btn-dark btn-sm rounded-pill mb-2 play-trailer-btn fs-3 w-100"
                                     data-bs-toggle="modal" data-bs-target="#trailerModal"
@@ -1150,40 +1697,40 @@
                                     data-title="The Herd Trailer">
                                     ▶ Play Trailer
                                 </button>
-
+ 
                                 <!-- Title + Duration -->
                                 <h5 class="text-white mb-1 fs-3">title: THE 007</h5>
                                 <small class="text-light mb-3 fs-3">
                                     ⏱ 1h 46m
                                 </small>
-
+ 
                                 <!-- Buttons -->
-                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal"
+                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="setCurrentMovie(this.closest('[data-movie-id]')?.dataset.movieId)"
                                     class="btn btn-primary btn-sm mb-2 fs-3 w-100">
                                     Buy Ticket
                                 </a>
-
+ 
                                 <a href="#" class="text-white text-decoration-none text-center fw-bold fs-3">
                                     More Info →
                                 </a>
-
+ 
                             </div>
                         </div>
                     </div>
-
-
-
-
+ 
+ 
+ 
+ 
                     <div class="col-6 col-md-4 col-lg-2">
-                        <div class="movie-card position-relative overflow-hidden">
-
+                        <div class="movie-card position-relative overflow-hidden" data-movie-id="kingsman">
+ 
                             <img src="https://i.pinimg.com/736x/44/94/6c/44946c4360609d9f22f9c9415a1fbe34.jpg"
                                 alt="The Herd" class="img-fluid movie-poster w-100">
-
+ 
                             <!-- Hover Overlay -->
                             <div
                                 class="movie-overlay d-flex flex-column justify-content-center align-items-center text-center p-3">
-
+ 
                                 <!-- Play Trailer -->
                                 <button class="btn btn-dark btn-sm rounded-pill mb-2 play-trailer-btn fs-3 w-100"
                                     data-bs-toggle="modal" data-bs-target="#trailerModal"
@@ -1191,38 +1738,38 @@
                                     data-title="The Herd Trailer">
                                     ▶ Play Trailer
                                 </button>
-
+ 
                                 <!-- Title + Duration -->
                                 <h5 class="text-white mb-1 fs-3">title: KINGSMAN</h5>
                                 <small class="text-light mb-3 fs-3">
                                     ⏱ 1h 46m
                                 </small>
-
+ 
                                 <!-- Buttons -->
-                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal"
+                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="setCurrentMovie(this.closest('[data-movie-id]')?.dataset.movieId)"
                                     class="btn btn-primary btn-sm mb-2 fs-3 w-100">
                                     Buy Ticket
                                 </a>
-
+ 
                                 <a href="#" class="text-white text-decoration-none text-center fw-bold fs-3">
                                     More Info →
                                 </a>
-
+ 
                             </div>
                         </div>
                     </div>
-
-
+ 
+ 
                     <div class="col-6 col-md-4 col-lg-2">
-                        <div class="movie-card position-relative overflow-hidden">
-
+                        <div class="movie-card position-relative overflow-hidden" data-movie-id="suspicion">
+ 
                             <img src="https://i.pinimg.com/736x/91/89/4d/91894d1e4cef257547c302539ecbdf92.jpg"
                                 alt="The Herd" class="img-fluid movie-poster w-100">
-
+ 
                             <!-- Hover Overlay -->
                             <div
                                 class="movie-overlay d-flex flex-column justify-content-center align-items-center text-center p-3">
-
+ 
                                 <!-- Play Trailer -->
                                 <button class="btn btn-dark btn-sm rounded-pill mb-2 play-trailer-btn fs-3 w-100"
                                     data-bs-toggle="modal" data-bs-target="#trailerModal"
@@ -1230,40 +1777,40 @@
                                     data-title="The Herd Trailer">
                                     ▶ Play Trailer
                                 </button>
-
+ 
                                 <!-- Title + Duration -->
                                 <h5 class="text-white mb-1 fs-3">title: SUSPICION</h5>
                                 <small class="text-light mb-3 fs-3">
                                     ⏱ 1h 46m
                                 </small>
-
+ 
                                 <!-- Buttons -->
-                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal"
+                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="setCurrentMovie(this.closest('[data-movie-id]')?.dataset.movieId)"
                                     class="btn btn-primary btn-sm mb-2 fs-3 w-100">
                                     Buy Ticket
                                 </a>
-
+ 
                                 <a href="#" class="text-white text-decoration-none text-center fw-bold fs-3">
                                     More Info →
                                 </a>
-
+ 
                             </div>
                         </div>
                     </div>
-
-
-
-
+ 
+ 
+ 
+ 
                     <div class="col-6 col-md-4 col-lg-2">
-                        <div class="movie-card position-relative overflow-hidden">
-
+                        <div class="movie-card position-relative overflow-hidden" data-movie-id="the_rip">
+ 
                             <img src="https://i.pinimg.com/736x/a7/44/12/a744123a1e5d5b9b478954ae3a804f8d.jpg"
                                 alt="The Herd" class="img-fluid movie-poster w-100">
-
+ 
                             <!-- Hover Overlay -->
                             <div
                                 class="movie-overlay d-flex flex-column justify-content-center align-items-center text-center p-3">
-
+ 
                                 <!-- Play Trailer -->
                                 <button class="btn btn-dark btn-sm rounded-pill mb-2 play-trailer-btn fs-3 w-100"
                                     data-bs-toggle="modal" data-bs-target="#trailerModal"
@@ -1271,39 +1818,39 @@
                                     data-title="The Herd Trailer">
                                     ▶ Play Trailer
                                 </button>
-
+ 
                                 <!-- Title + Duration -->
                                 <h5 class="text-white mb-1 fs-3">title: THE RIP</h5>
                                 <small class="text-light mb-3 fs-3">
                                     ⏱ 1h 46m
                                 </small>
-
+ 
                                 <!-- Buttons -->
-                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal"
+                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="setCurrentMovie(this.closest('[data-movie-id]')?.dataset.movieId)"
                                     class="btn btn-primary btn-sm mb-2 fs-3 w-100">
                                     Buy Ticket
                                 </a>
-
+ 
                                 <a href="#" class="text-white text-decoration-none text-center fw-bold fs-3">
                                     More Info →
                                 </a>
-
+ 
                             </div>
                         </div>
                     </div>
-
-
-
+ 
+ 
+ 
                     <div class="col-6 col-md-4 col-lg-2">
-                        <div class="movie-card position-relative overflow-hidden">
-
+                        <div class="movie-card position-relative overflow-hidden" data-movie-id="escape">
+ 
                             <img src="https://i.pinimg.com/736x/db/15/29/db152974f440e644a7a85bfd37b82598.jpg"
                                 alt="The Herd" class="img-fluid movie-poster w-100">
-
+ 
                             <!-- Hover Overlay -->
                             <div
                                 class="movie-overlay d-flex flex-column justify-content-center align-items-center text-center p-3">
-
+ 
                                 <!-- Play Trailer -->
                                 <button class="btn btn-dark btn-sm rounded-pill mb-2 play-trailer-btn fs-3 w-100"
                                     data-bs-toggle="modal" data-bs-target="#trailerModal"
@@ -1311,39 +1858,39 @@
                                     data-title="The Herd Trailer">
                                     ▶ Play Trailer
                                 </button>
-
+ 
                                 <!-- Title + Duration -->
                                 <h5 class="text-white mb-1 fs-3">title: ESCAPE</h5>
                                 <small class="text-light mb-3 fs-3">
                                     ⏱ 1h 46m
                                 </small>
-
+ 
                                 <!-- Buttons -->
-                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal"
+                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="setCurrentMovie(this.closest('[data-movie-id]')?.dataset.movieId)"
                                     class="btn btn-primary btn-sm mb-2 fs-3 w-100">
                                     Buy Ticket
                                 </a>
-
+ 
                                 <a href="#" class="text-white text-decoration-none text-center fw-bold fs-3">
                                     More Info →
                                 </a>
-
+ 
                             </div>
                         </div>
                     </div>
-
-
-
+ 
+ 
+ 
                     <div class="col-6 col-md-4 col-lg-2">
-                        <div class="movie-card position-relative overflow-hidden">
-
+                        <div class="movie-card position-relative overflow-hidden" data-movie-id="kings_of_oyo">
+ 
                             <img src="https://i.pinimg.com/736x/a3/5a/7a/a35a7ad26f2678e88935237dd1101c93.jpg"
                                 alt="The Herd" class="img-fluid movie-poster w-100">
-
+ 
                             <!-- Hover Overlay -->
                             <div
                                 class="movie-overlay d-flex flex-column justify-content-center align-items-center text-center p-3">
-
+ 
                                 <!-- Play Trailer -->
                                 <button class="btn btn-dark btn-sm rounded-pill mb-2 play-trailer-btn fs-3 w-100"
                                     data-bs-toggle="modal" data-bs-target="#trailerModal"
@@ -1351,233 +1898,661 @@
                                     data-title="The Herd Trailer">
                                     ▶ Play Trailer
                                 </button>
-
+ 
                                 <!-- Title + Duration -->
                                 <h5 class="text-white mb-1 fs-3">title: KINGS OF OYO</h5>
                                 <small class="text-light mb-3 fs-3">
                                     ⏱ 1h 46m
                                 </small>
-
+ 
                                 <!-- Buttons -->
-                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal"
+                                <a href="./buyticket.html" data-bs-toggle="modal" data-bs-target="#ticketModal" onclick="setCurrentMovie(this.closest('[data-movie-id]')?.dataset.movieId)"
                                     class="btn btn-primary btn-sm mb-2 fs-3 w-100">
                                     Buy Ticket
                                 </a>
-
+ 
                                 <a href="#" class="text-white text-decoration-none text-center fw-bold fs-3">
                                     More Info →
                                 </a>
-
+ 
                             </div>
                         </div>
                     </div>
-
+ 
                 </div>
-
+ 
             </div>
         </section>
-
-
-
-
-
+ 
+ 
+ 
+ 
+ 
+        <!-- ===================== BOOKING MODAL ===================== -->
+        <!-- Pre-fills automatically from whichever movie card or slide
+             triggered it (see setCurrentMovie() / "show.bs.modal" below) -->
         <div class="modal fade" id="ticketModal" tabindex="-1">
-            <div class="modal-dialog modal-lg">
+            <div class="modal-dialog modal-lg modal-dialog-scrollable">
                 <div class="modal-content">
-
-                    <div class="modal-header text-white" style="background-color: green;">
-                        <h3 class="modal-title fw-bold">Book Ticket 🎬</h3>
-                        <button class="btn-close btn-close-white" data-bs-dismiss="modal">X</button>
-                    </div>
-
-                    <div class="modal-body fs-5">
-
-                        <!-- CUSTOMER INFO -->
-                        <input class="form-control form-control-lg mb-3" id="firstName" placeholder="First Name">
-
-                        <input class="form-control form-control-lg mb-3" id="middleName"
-                            placeholder="Middle Name (Optional)">
-
-                        <input class="form-control form-control-lg mb-3" id="lastName" placeholder="Last Name">
-
-                        <input class="form-control form-control-lg mb-3" id="email" placeholder="Email">
-
-                        <input class="form-control form-control-lg mb-4" id="phone" placeholder="Phone Number">
-
-                        <!-- MOVIE -->
-                        <label class="form-label fw-bold fs-5">Select Movie</label>
-                        <select class="form-select form-select-lg mb-4 " id="movie">
-                            <option value="5000">Mission Impossible - ₦5,000</option>
-                            <option value="4500">Avatar - ₦4,500</option>
-                            <option value="4000">Black Panther - ₦4,000</option>
-                        </select>
-
-                        <!-- DATE -->
-                        <label class="form-label fw-bold fs-5">Select Date</label>
-                        <input type="date" class="form-control form-control-lg mb-4" id="date">
-
-                        <!-- SEAT -->
-                        <label class="form-label fw-bold fs-5">Select Seat</label>
-                        <select class="form-select form-select-lg mb-4" id="seat">
-                            <option>A1</option>
-                            <option>A2</option>
-                            <option>A3</option>
-                            <option>B1</option>
-                            <option>B2</option>
-                        </select>
-
-                        <!-- FOOD -->
-                        <label class="form-label fw-bold fs-5">Food Menu</label>
-                        <select class="form-select form-select-lg mb-4 extra">
-                            <option value="0">None</option>
-                            <option value="2500">Burger - ₦2,500</option>
-                            <option value="3000">Chicken & Chips - ₦3,000</option>
-                        </select>
-
-                        <!-- DRINK -->
-                        <label class="form-label fw-bold fs-5">Drinks</label>
-                        <select class="form-select form-select-lg mb-4 extra">
-                            <option value="0">None</option>
-                            <option value="1000">Coke - ₦1,000</option>
-                            <option value="1500">Malt - ₦1,500</option>
-                        </select>
-
-                        <!-- TOTAL -->
-                        <div class="alert alert-success fs-4 fw-bold text-center">
-                            Total: ₦<span id="total">5000</span>
+ 
+                    <div class="booking-header">
+                        <img id="tmMoviePoster" src="" alt="Movie poster">
+                        <div class="booking-header-info">
+                            <h4 id="tmMovieTitle">Movie Title</h4>
+                            <div class="booking-header-meta">
+                                <span><i class="bi bi-calendar-event"></i> <span id="tmMovieDate">—</span></span>
+                                <span><i class="bi bi-clock"></i> <span id="tmMovieTime">—</span></span>
+                            </div>
                         </div>
-
+                        <div class="booking-price-tag">
+                            <small>Ticket Price</small>
+                            <strong id="tmMoviePrice">₦0</strong>
+                        </div>
+                        <button class="btn-close btn-close-white ms-2" data-bs-dismiss="modal"></button>
                     </div>
-
-                    <div class="modal-footer">
-                        <button class="btn btn-success btn-lg w-100 fw-bold" onclick="generateReceipt()">
-                            Pay Now
+ 
+                    <div class="modal-body">
+ 
+                        <div class="booking-section-title"><i class="bi bi-person-badge"></i> Your Details</div>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <input class="form-control form-control-lg booking-form-input" id="bookFirstName"
+                                    placeholder="First Name">
+                            </div>
+                            <div class="col-md-6">
+                                <input class="form-control form-control-lg booking-form-input" id="bookLastName"
+                                    placeholder="Last Name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control form-control-lg booking-form-input"
+                                    id="bookEmail" placeholder="Email Address">
+                            </div>
+                            <div class="col-md-6">
+                                <input class="form-control form-control-lg booking-form-input" id="bookPhone"
+                                    placeholder="Phone Number">
+                            </div>
+                        </div>
+ 
+                        <div class="booking-section-title"><i class="bi bi-grid-3x3-gap-fill"></i> Select Your
+                            Seat(s)</div>
+                        <div class="seat-map-card">
+                            <div class="screen-indicator">Screen this way</div>
+                            <div class="seat-map-scroll" id="seatMapWrap"></div>
+                            <div class="seat-legend">
+                                <span><span class="legend-box available"></span> Available</span>
+                                <span><span class="legend-box selected"></span> Selected</span>
+                            </div>
+                            <div class="selected-seats-summary">
+                                Selected seats (<span id="seatCountDisplay">0</span>):
+                                <span id="selectedSeatsList">No seats selected</span>
+                            </div>
+                        </div>
+ 
+                        <div class="booking-section-title"><i class="bi bi-cup-straw"></i> Snacks & Drinks</div>
+                        <div class="food-menu-card" id="foodMenuWrap"></div>
+ 
+                        <div class="booking-total-bar">
+                            <div class="booking-total-row">
+                                <span>Tickets (<span id="seatCountDisplay2">0</span> seat(s) × <span
+                                        id="ticketUnitPrice">₦0</span>)</span>
+                                <span>₦<span id="ticketSubtotal">0</span></span>
+                            </div>
+                            <div class="booking-total-row">
+                                <span>Snacks & Drinks</span>
+                                <span>₦<span id="foodSubtotal">0</span></span>
+                            </div>
+                            <div class="booking-total-row grand">
+                                <span>Total</span>
+                                <span>₦<span id="grandTotal">0</span></span>
+                            </div>
+                        </div>
+ 
+                    </div>
+ 
+                    <div class="modal-footer border-0">
+                        <button class="btn btn-confirm-booking btn-lg w-100 text-white"
+                            onclick="validateAndProceedToPayment()">
+                            Confirm Booking &amp; Get Ticket
                         </button>
                     </div>
-
+ 
                 </div>
             </div>
         </div>
-
-
-
-        <div class="modal fade" id="receiptModal" tabindex="-1">
-            <div class="modal-dialog">
+ 
+ 
+        <!-- ===================== PAYMENT METHOD ===================== -->
+        <div class="modal fade" id="paymentModal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
-
-                    <div class="modal-header bg-success text-white">
-                        <h5 class="modal-title">Ticket Receipt</h5>
+ 
+                    <div class="payment-header d-flex align-items-center justify-content-between">
+                        <h4>Choose Payment Method</h4>
+                        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                     </div>
-
-                    <div class="modal-body text-center">
-
-                        <h4>🎬 9ja Cinemas Grill</h4>
-
-                        <p id="receiptName"></p>
-                        <p id="receiptEmail"></p>
-                        <p id="receiptPhone"></p>
-                        <p id="receiptMovie"></p>
-                        <p id="receiptSeat"></p>
-                        <p id="receiptDate"></p>
-                        <p id="receiptTotal"></p>
-
-                        <div id="qrcode"></div>
-
-                        <button onclick="window.print()" class="btn btn-primary mt-3">
-                            Print Ticket
+ 
+                    <div class="modal-body">
+ 
+                        <div class="payment-order-summary">
+                            <div class="row-line"><span>Booking Ref</span><span id="payOrderRef">—</span></div>
+                            <div class="row-line"><span>Movie</span><span id="payMovieLine">—</span></div>
+                            <div class="row-line"><span>Seats</span><span id="paySeatsLine">—</span></div>
+                            <div class="row-line total"><span>Amount to Pay</span><span
+                                    id="payTotalDisplay">₦0</span>
+                            </div>
+                        </div>
+ 
+                        <button type="button" class="payment-option" onclick="payViaWhatsApp()">
+                            <span class="payment-option-icon whatsapp"><i class="bi bi-whatsapp"></i></span>
+                            <span class="payment-option-text">
+                                <strong>Pay via WhatsApp</strong>
+                                <span>Chat a live agent to complete payment and get help</span>
+                            </span>
+                            <span class="payment-option-arrow"><i class="bi bi-chevron-right"></i></span>
                         </button>
-
+ 
+                        <button type="button" class="payment-option" onclick="payViaFlutterwave()">
+                            <span class="payment-option-icon flutterwave">FLW</span>
+                            <span class="payment-option-text">
+                                <strong>Pay with Card / Bank / USSD</strong>
+                                <span>Secure instant checkout powered by Flutterwave</span>
+                            </span>
+                            <span class="payment-option-arrow"><i class="bi bi-chevron-right"></i></span>
+                        </button>
+ 
+                        <div id="waConfirmStep" class="whatsapp-confirm-step d-none">
+                            A chat window has opened on WhatsApp with your booking details — an agent will confirm
+                            your payment there. Once you've completed payment, tap below to issue your ticket.
+                            <br>
+                            <button type="button" class="btn btn-issue-ticket w-100"
+                                onclick="confirmWhatsAppPaymentDone()">
+                                I've Sent Payment — Issue My Ticket
+                            </button>
+                        </div>
+ 
                     </div>
-
+ 
                 </div>
             </div>
         </div>
-
-
+ 
+ 
+        <!-- ===================== TICKET RECEIPT ===================== -->
+        <div class="modal fade" id="receiptModal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="ticket-stub">
+ 
+                        <div class="ticket-stub-top">
+                            <small>9ja Cinema Grill Ltd</small>
+                            <h3>🎬 Admission Ticket</h3>
+                        </div>
+ 
+                        <div class="ticket-perforation"></div>
+ 
+                        <div class="ticket-stub-body">
+                            <div class="ticket-row"><span class="label">Booking Ref</span><span class="value"
+                                    id="receiptRef">—</span></div>
+                            <div class="ticket-row"><span class="label">Name</span><span class="value"
+                                    id="receiptName">—</span></div>
+                            <div class="ticket-row"><span class="label">Movie</span><span class="value"
+                                    id="receiptMovie">—</span></div>
+                            <div class="ticket-row"><span class="label">Showtime</span><span class="value"
+                                    id="receiptShow">—</span></div>
+                            <div class="ticket-row"><span class="label">Seat(s)</span><span class="value"
+                                    id="receiptSeats">—</span></div>
+                            <div class="ticket-row"><span class="label">Snacks & Drinks</span><span class="value"
+                                    id="receiptFood">—</span></div>
+                            <div class="ticket-row"><span class="label">Email</span><span class="value"
+                                    id="receiptEmail">—</span></div>
+                            <div class="ticket-row"><span class="label">Phone</span><span class="value"
+                                    id="receiptPhone">—</span></div>
+                            <div class="ticket-row"><span class="label">Total Paid</span><span class="value"
+                                    id="receiptTotal">₦0</span></div>
+                        </div>
+ 
+                        <div class="ticket-qr-wrap">
+                            <div id="qrcode"></div>
+                            <div class="ticket-ref-note">Scan at entrance for confirmation</div>
+                        </div>
+ 
+                    </div>
+ 
+                    <div class="modal-footer border-0 justify-content-center">
+                        <button onclick="window.print()" class="btn btn-outline-light">
+                            <i class="bi bi-printer"></i> Print Ticket
+                        </button>
+                        <button class="btn btn-success" data-bs-dismiss="modal">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+ 
+        <!-- QR code generator used for the ticket receipt -->
+        <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+ 
+        <!-- Flutterwave inline checkout SDK -->
+        <script src="https://checkout.flutterwave.com/v3.js"></script>
+ 
         <script>
-
-            function updateTotal() {
-                let movie = parseInt(document.getElementById("movie").value);
-                let extras = 0;
-
-                document.querySelectorAll(".extra").forEach(e => {
-                    extras += parseInt(e.value || 0);
-                });
-
-                document.getElementById("total").textContent = movie + extras;
+ 
+            /* =========================================================
+               MOVIE CATALOGUE
+               One entry per movie shown on this page (carousel slides
+               and Now Showing / Coming Soon cards share the same ids
+               where they're the same movie), so every "Buy Ticket"
+               trigger pre-fills the booking modal correctly.
+               ========================================================= */
+            const movieCatalog = [
+                { id: "ride_or_die", title: "Ride or Die", price: 5000, day: "Today", time: "2:00 PM - 3:30 PM",
+                  poster: "https://m.media-amazon.com/images/M/MV5BMGUxMjFkMDEtNGJkZC00MTUwLWFiZjUtYWZhZWYxNzE1ZDEwXkEyXkFqcGc@._V1_FMjpg_UX898_.jpg" },
+                { id: "the_bluff", title: "The Bluff", price: 8500, day: "Today", time: "4:00 PM - 5:30 PM",
+                  poster: "https://i.pinimg.com/control1/736x/63/c0/bc/63c0bc4605bfff1f894ee2f7be1c424c.jpg" },
+                { id: "smile", title: "Smile", price: 4000, day: "Today", time: "6:00 PM - 7:00 PM",
+                  poster: "https://m.media-amazon.com/images/M/MV5BNjFhMzBlNzktMjE2Ni00YTMyLWI2YWUtYmM1N2QxMDQwZmZhXkEyXkFqcGc@._V1_QL75_UX180_CR0,0,180,266_.jpg" },
+                { id: "woman_king", title: "The Woman King", price: 5000, day: "Today", time: "7:30 PM - 9:16 PM",
+                  poster: "https://i.pinimg.com/736x/67/78/e5/6778e5c46ea55b6dac442747f1f7ccf0.jpg" },
+                { id: "alien_predator", title: "Alien Predator", price: 4800, day: "Today", time: "9:30 PM - 11:16 PM",
+                  poster: "https://i.pinimg.com/736x/5b/24/80/5b2480f098b2b76caa1fa5313558fab4.jpg" },
+                { id: "apocalypto", title: "Apocalypto", price: 4200, day: "Today", time: "11:30 PM - 1:16 AM",
+                  poster: "https://i.pinimg.com/736x/5e/d6/dc/5ed6dcd46906e9eae3a3189e91a49dcc.jpg" },
+ 
+                { id: "avatar", title: "Avatar", price: 5500, day: "Coming Soon", time: "To be announced",
+                  poster: "https://i.pinimg.com/736x/f3/e3/3d/f3e33d9361bb4986b75645df7c29cd26.jpg" },
+                { id: "van_helsing_2", title: "Van Helsing 2", price: 4500, day: "Coming Soon", time: "To be announced",
+                  poster: "https://i.pinimg.com/736x/90/27/d7/9027d7410f2bfbdc2bf9dc14d7e419b6.jpg" },
+                { id: "riddick_4", title: "Riddick 4", price: 4800, day: "Coming Soon", time: "To be announced",
+                  poster: "https://i.pinimg.com/736x/c6/0a/a0/c60aa057e50daa20df30ba655ab08d4d.jpg" },
+                { id: "scorpion_king", title: "The Scorpion King", price: 4200, day: "Coming Soon", time: "To be announced",
+                  poster: "https://i.pinimg.com/736x/10/9c/2c/109c2c5bfc904da7f0fd30fc5945bed5.jpg" },
+                { id: "tango_cash", title: "Tango & Cash", price: 4000, day: "Coming Soon", time: "To be announced",
+                  poster: "https://i.pinimg.com/736x/9b/68/24/9b6824ce5667e8cd59babe5231b3a7d1.jpg" },
+                { id: "van_damme", title: "Van Damme", price: 4000, day: "Coming Soon", time: "To be announced",
+                  poster: "https://i.pinimg.com/736x/3b/38/ac/3b38acde1167414934f820ef1b963b40.jpg" },
+                { id: "the_007", title: "The 007", price: 5000, day: "Coming Soon", time: "To be announced",
+                  poster: "https://i.pinimg.com/736x/65/c8/8f/65c88fd85717aad306cef942bda22218.jpg" },
+                { id: "kingsman", title: "Kingsman", price: 4600, day: "Coming Soon", time: "To be announced",
+                  poster: "https://i.pinimg.com/736x/44/94/6c/44946c4360609d9f22f9c9415a1fbe34.jpg" },
+                { id: "suspicion", title: "Suspicion", price: 4000, day: "Coming Soon", time: "To be announced",
+                  poster: "https://i.pinimg.com/736x/91/89/4d/91894d1e4cef257547c302539ecbdf92.jpg" },
+                { id: "the_rip", title: "The Rip", price: 4000, day: "Coming Soon", time: "To be announced",
+                  poster: "https://i.pinimg.com/736x/a7/44/12/a744123a1e5d5b9b478954ae3a804f8d.jpg" },
+                { id: "escape", title: "Escape", price: 4000, day: "Coming Soon", time: "To be announced",
+                  poster: "https://i.pinimg.com/736x/db/15/29/db152974f440e644a7a85bfd37b82598.jpg" },
+                { id: "kings_of_oyo", title: "Kings of Oyo", price: 4200, day: "Coming Soon", time: "To be announced",
+                  poster: "https://i.pinimg.com/736x/a3/5a/7a/a35a7ad26f2678e88935237dd1101c93.jpg" }
+            ];
+ 
+            // Whichever movie/day/time was last clicked — read by the
+            // booking modal the instant it opens.
+            let currentMovie = movieCatalog[0];
+            let currentActiveDay = currentMovie.day;
+            let currentActiveTime = currentMovie.time;
+ 
+            // Called by every "Buy Ticket" trigger on the page (navbar,
+            // carousel slides, and movie cards) via their onclick, right
+            // before Bootstrap opens the modal.
+            function setCurrentMovie(movieId) {
+                if (!movieId) return; // e.g. the generic navbar link — keep whatever was last selected
+                const movie = movieCatalog.find(m => m.id === movieId);
+                if (!movie) return;
+ 
+                currentMovie = movie;
+                currentActiveDay = movie.day;
+                currentActiveTime = movie.time;
             }
-
-            document.querySelectorAll("select").forEach(el => {
-                el.addEventListener("change", updateTotal);
+ 
+ 
+            /* =========================================================
+               BOOKING MODAL LOGIC
+               - Seat map: 10 rows (A–J) x 10 seats = 100 seats,
+                 multi-select, arranged horizontally per row.
+               - Food & drinks: quantity steppers, variety of items.
+               - Live running total: (seats × ticket price) + food total.
+               - Confirm booking -> choose payment method -> pay ->
+                 renders a professional printable ticket with a QR code.
+               ========================================================= */
+ 
+            const foodMenu = [
+                { id: "popcorn_salt", name: "Popcorn (Salted)", price: 1500, cat: "Snacks" },
+                { id: "popcorn_caramel", name: "Popcorn (Caramel)", price: 1800, cat: "Snacks" },
+                { id: "nachos", name: "Nachos & Cheese", price: 2200, cat: "Snacks" },
+                { id: "hotdog", name: "Hotdog", price: 2000, cat: "Snacks" },
+                { id: "chicken_chips", name: "Chicken & Chips", price: 3000, cat: "Meals" },
+                { id: "burger", name: "Classic Burger", price: 2500, cat: "Meals" },
+                { id: "pizza", name: "Pizza Slice", price: 2000, cat: "Meals" },
+                { id: "suya", name: "Beef Suya Wrap", price: 2800, cat: "Meals" },
+                { id: "icecream", name: "Ice Cream Cup", price: 1500, cat: "Desserts" },
+                { id: "coke", name: "Coca-Cola", price: 1000, cat: "Drinks" },
+                { id: "fanta", name: "Fanta", price: 1000, cat: "Drinks" },
+                { id: "malt", name: "Malt", price: 1500, cat: "Drinks" },
+                { id: "water", name: "Bottled Water", price: 500, cat: "Drinks" },
+                { id: "slush", name: "Slush Puppie", price: 1800, cat: "Drinks" }
+            ];
+ 
+            const SEAT_ROWS = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
+            const SEATS_PER_ROW = 10;
+ 
+            let selectedSeats = new Set();
+            let foodOrder = {};
+ 
+            function renderSeats() {
+                const wrap = document.getElementById("seatMapWrap");
+                wrap.innerHTML = "";
+ 
+                SEAT_ROWS.forEach(row => {
+                    const rowDiv = document.createElement("div");
+                    rowDiv.className = "seat-row";
+ 
+                    const label = document.createElement("span");
+                    label.className = "seat-row-label";
+                    label.textContent = row;
+                    rowDiv.appendChild(label);
+ 
+                    for (let i = 1; i <= SEATS_PER_ROW; i++) {
+                        const seatId = row + i;
+ 
+                        const btn = document.createElement("button");
+                        btn.type = "button";
+                        btn.className = "seat-btn";
+                        btn.textContent = i;
+                        btn.dataset.seat = seatId;
+                        btn.addEventListener("click", () => toggleSeat(seatId, btn));
+ 
+                        rowDiv.appendChild(btn);
+                    }
+ 
+                    wrap.appendChild(rowDiv);
+                });
+            }
+ 
+            function toggleSeat(seatId, btn) {
+                if (selectedSeats.has(seatId)) {
+                    selectedSeats.delete(seatId);
+                    btn.classList.remove("selected");
+                } else {
+                    selectedSeats.add(seatId);
+                    btn.classList.add("selected");
+                }
+                updateBookingTotal();
+            }
+ 
+            function renderFoodMenu() {
+                const container = document.getElementById("foodMenuWrap");
+                container.innerHTML = "";
+ 
+                const categories = [...new Set(foodMenu.map(item => item.cat))];
+ 
+                categories.forEach(cat => {
+                    const catTitle = document.createElement("div");
+                    catTitle.className = "food-cat-title";
+                    catTitle.textContent = cat;
+                    container.appendChild(catTitle);
+ 
+                    foodMenu.filter(item => item.cat === cat).forEach(item => {
+                        const row = document.createElement("div");
+                        row.className = "food-item";
+                        row.innerHTML = `
+                            <div>
+                                <span class="food-item-name">${item.name}</span>
+                                <span class="food-item-price">₦${item.price.toLocaleString()}</span>
+                            </div>
+                            <div class="food-stepper">
+                                <button type="button" class="step-btn" onclick="changeFoodQty('${item.id}', -1)">−</button>
+                                <span id="qty_${item.id}" class="qty-val">0</span>
+                                <button type="button" class="step-btn" onclick="changeFoodQty('${item.id}', 1)">+</button>
+                            </div>
+                        `;
+                        container.appendChild(row);
+                    });
+                });
+            }
+ 
+            function changeFoodQty(id, delta) {
+                const current = foodOrder[id] || 0;
+                const next = Math.max(0, current + delta);
+                foodOrder[id] = next;
+                document.getElementById(`qty_${id}`).textContent = next;
+                updateBookingTotal();
+            }
+ 
+            function updateBookingTotal() {
+                const seatCount = selectedSeats.size;
+                const unitPrice = (currentMovie && currentMovie.price) || 0;
+                const ticketTotal = seatCount * unitPrice;
+ 
+                let foodTotal = 0;
+                Object.keys(foodOrder).forEach(id => {
+                    const qty = foodOrder[id] || 0;
+                    if (qty > 0) {
+                        const item = foodMenu.find(f => f.id === id);
+                        foodTotal += qty * item.price;
+                    }
+                });
+ 
+                document.getElementById("seatCountDisplay").textContent = seatCount;
+                document.getElementById("seatCountDisplay2").textContent = seatCount;
+                document.getElementById("ticketUnitPrice").textContent = `₦${unitPrice.toLocaleString()}`;
+                document.getElementById("ticketSubtotal").textContent = ticketTotal.toLocaleString();
+                document.getElementById("foodSubtotal").textContent = foodTotal.toLocaleString();
+                document.getElementById("grandTotal").textContent = (ticketTotal + foodTotal).toLocaleString();
+ 
+                document.getElementById("selectedSeatsList").textContent =
+                    seatCount ? [...selectedSeats].sort().join(", ") : "No seats selected";
+            }
+ 
+            function resetBookingForm() {
+                selectedSeats = new Set();
+                foodOrder = {};
+ 
+                document.getElementById("bookFirstName").value = "";
+                document.getElementById("bookLastName").value = "";
+                document.getElementById("bookEmail").value = "";
+                document.getElementById("bookPhone").value = "";
+ 
+                renderSeats();
+                renderFoodMenu();
+                updateBookingTotal();
+            }
+ 
+            // Every time the booking modal is opened, pull in whichever
+            // movie was last clicked via setCurrentMovie().
+            document.getElementById("ticketModal").addEventListener("show.bs.modal", function () {
+                if (!currentMovie) return;
+ 
+                document.getElementById("tmMoviePoster").src = currentMovie.poster;
+                document.getElementById("tmMovieTitle").textContent = currentMovie.title;
+                document.getElementById("tmMovieDate").textContent = currentActiveDay || "—";
+                document.getElementById("tmMovieTime").textContent = currentActiveTime || currentMovie.time;
+                document.getElementById("tmMoviePrice").textContent = `₦${(currentMovie.price || 0).toLocaleString()}`;
+ 
+                resetBookingForm();
             });
-
-            function generateReceipt() {
-
-                let firstName = document.getElementById("firstName").value;
-                let middleName = document.getElementById("middleName").value;
-                let lastName = document.getElementById("lastName").value;
-                let email = document.getElementById("email").value;
-                let phone = document.getElementById("phone").value;
-
-                let movie = document.getElementById("movie").options[document.getElementById("movie").selectedIndex].text;
-                let seat = document.getElementById("seat").value;
-                let date = document.getElementById("date").value;
-                let total = document.getElementById("total").textContent;
-
-                document.getElementById("receiptName").innerHTML =
-                    `<b>Name:</b> ${firstName} ${middleName} ${lastName}`;
-
-                document.getElementById("receiptEmail").innerHTML =
-                    `<b>Email:</b> ${email}`;
-
-                document.getElementById("receiptPhone").innerHTML =
-                    `<b>Phone:</b> ${phone}`;
-
-                document.getElementById("receiptMovie").innerHTML =
-                    `<b>Movie:</b> ${movie}`;
-
-                document.getElementById("receiptSeat").innerHTML =
-                    `<b>Seat:</b> ${seat}`;
-
-                document.getElementById("receiptDate").innerHTML =
-                    `<b>Date:</b> ${date}`;
-
-                document.getElementById("receiptTotal").innerHTML =
-                    `<b>Total:</b> ₦${total}`;
-
-                document.getElementById("qrcode").innerHTML = "";
-
-                new QRCode(document.getElementById("qrcode"), {
-                    text: `${firstName}-${movie}-${seat}-${date}-${total}`,
-                    width: 120,
-                    height: 120
-                });
-
-                new bootstrap.Modal(document.getElementById("receiptModal")).show();
+ 
+            // Holds the validated booking while the person picks a
+            // payment method and pays; the ticket is only issued after
+            // payment is completed (WhatsApp agent confirmation or a
+            // successful Flutterwave transaction).
+            let pendingBooking = null;
+ 
+            function validateAndProceedToPayment() {
+                const firstName = document.getElementById("bookFirstName").value.trim();
+                const lastName = document.getElementById("bookLastName").value.trim();
+                const email = document.getElementById("bookEmail").value.trim();
+                const phone = document.getElementById("bookPhone").value.trim();
+ 
+                if (!firstName || !lastName) {
+                    alert("Please enter your full name.");
+                    return;
+                }
+                if (!email) {
+                    alert("Please enter your email address.");
+                    return;
+                }
+                if (selectedSeats.size === 0) {
+                    alert("Please select at least one seat.");
+                    return;
+                }
+ 
+                const seatList = [...selectedSeats].sort().join(", ");
+                const orderRef = "CG-" + Date.now().toString(36).toUpperCase();
+                const grandTotalText = document.getElementById("grandTotal").textContent;
+                const grandTotalNumber = parseInt(grandTotalText.replace(/,/g, ""), 10) || 0;
+ 
+                const foodSummary = Object.keys(foodOrder)
+                    .filter(id => foodOrder[id] > 0)
+                    .map(id => {
+                        const item = foodMenu.find(f => f.id === id);
+                        return `${item.name} x${foodOrder[id]}`;
+                    }).join(", ") || "None";
+ 
+                pendingBooking = {
+                    orderRef, firstName, lastName, email, phone,
+                    movie: currentMovie.title,
+                    show: `${currentActiveDay || ""} • ${currentActiveTime || currentMovie.time}`,
+                    seatList,
+                    foodSummary,
+                    totalText: grandTotalText,
+                    totalNumber: grandTotalNumber
+                };
+ 
+                // Populate the payment modal's order summary
+                document.getElementById("payOrderRef").textContent = orderRef;
+                document.getElementById("payMovieLine").textContent = `${pendingBooking.movie} — ${pendingBooking.show}`;
+                document.getElementById("paySeatsLine").textContent = seatList;
+                document.getElementById("payTotalDisplay").textContent = `₦${grandTotalText}`;
+                document.getElementById("waConfirmStep").classList.add("d-none");
+ 
+                bootstrap.Modal.getInstance(document.getElementById("ticketModal"))?.hide();
+                new bootstrap.Modal(document.getElementById("paymentModal")).show();
             }
-
-            updateTotal();
-
+ 
+            // Opens a prefilled WhatsApp chat to a live agent who will
+            // confirm the payment manually.
+            function payViaWhatsApp() {
+                if (!pendingBooking) return;
+ 
+                // TODO: replace with your real WhatsApp Business number,
+                // in international format with no "+" or leading zero,
+                // e.g. Nigeria 080XXXXXXXX -> "2348XXXXXXXX"
+                const AGENT_WHATSAPP_NUMBER = "2348000000000";
+ 
+                const message =
+                    `Hello 9ja Cinema Grill! I'd like to pay for my booking.%0A%0A` +
+                    `Booking Ref: ${pendingBooking.orderRef}%0A` +
+                    `Name: ${pendingBooking.firstName} ${pendingBooking.lastName}%0A` +
+                    `Movie: ${pendingBooking.movie}%0A` +
+                    `Showtime: ${pendingBooking.show}%0A` +
+                    `Seats: ${pendingBooking.seatList}%0A` +
+                    `Food/Drinks: ${pendingBooking.foodSummary}%0A` +
+                    `Total: ₦${pendingBooking.totalText}`;
+ 
+                window.open(`https://wa.me/${AGENT_WHATSAPP_NUMBER}?text=${message}`, "_blank");
+ 
+                document.getElementById("waConfirmStep").classList.remove("d-none");
+            }
+ 
+            // Called once the person confirms (in the UI) that the agent
+            // has verified their WhatsApp payment.
+            function confirmWhatsAppPaymentDone() {
+                issueTicket();
+            }
+ 
+            // Launches Flutterwave's inline checkout for card / bank /
+            // USSD payment. The ticket is issued in the success callback.
+            function payViaFlutterwave() {
+                if (!pendingBooking) return;
+ 
+                if (typeof FlutterwaveCheckout !== "function") {
+                    alert("Payment gateway failed to load. Please check your connection and try again.");
+                    return;
+                }
+ 
+                FlutterwaveCheckout({
+                    // TODO: replace with your real Flutterwave public key
+                    // (find it in your Flutterwave dashboard under Settings > API)
+                    public_key: "FLWPUBK_TEST-REPLACE-WITH-YOUR-PUBLIC-KEY-X",
+                    tx_ref: pendingBooking.orderRef,
+                    amount: pendingBooking.totalNumber,
+                    currency: "NGN",
+                    payment_options: "card, banktransfer, ussd",
+                    customer: {
+                        email: pendingBooking.email,
+                        phone_number: pendingBooking.phone,
+                        name: `${pendingBooking.firstName} ${pendingBooking.lastName}`
+                    },
+                    customizations: {
+                        title: "9ja Cinema Grill Ltd",
+                        description: `Ticket for ${pendingBooking.movie}`,
+                        logo: "./img/logo cinema grill.png"
+                    },
+                    callback: function (response) {
+                        if (response.status === "successful" || response.status === "completed") {
+                            issueTicket();
+                        } else {
+                            alert("Payment was not completed. Please try again.");
+                        }
+                    },
+                    onclose: function () {
+                        // Person closed the Flutterwave popup without paying —
+                        // stay on the payment modal so they can retry.
+                    }
+                });
+            }
+ 
+            // Renders the printable ticket + QR code from the pending
+            // booking once payment has been confirmed.
+            function issueTicket() {
+                if (!pendingBooking) return;
+                const b = pendingBooking;
+ 
+                document.getElementById("receiptRef").textContent = b.orderRef;
+                document.getElementById("receiptName").textContent = `${b.firstName} ${b.lastName}`;
+                document.getElementById("receiptMovie").textContent = b.movie;
+                document.getElementById("receiptShow").textContent = b.show;
+                document.getElementById("receiptSeats").textContent = b.seatList;
+                document.getElementById("receiptFood").textContent = b.foodSummary;
+                document.getElementById("receiptEmail").textContent = b.email;
+                document.getElementById("receiptPhone").textContent = b.phone || "—";
+                document.getElementById("receiptTotal").textContent = `₦${b.totalText}`;
+ 
+                document.getElementById("qrcode").innerHTML = "";
+                new QRCode(document.getElementById("qrcode"), {
+                    text: `REF:${b.orderRef}|NAME:${b.firstName} ${b.lastName}|MOVIE:${b.movie}|SEATS:${b.seatList}|TOTAL:₦${b.totalText}`,
+                    width: 130,
+                    height: 130,
+                    colorDark: "#0b1220",
+                    colorLight: "#ffffff"
+                });
+ 
+                bootstrap.Modal.getInstance(document.getElementById("paymentModal"))?.hide();
+                new bootstrap.Modal(document.getElementById("receiptModal")).show();
+ 
+                pendingBooking = null;
+            }
+ 
         </script>
-
-
-
-
+ 
+ 
+ 
+ 
+ 
         <footer class="cinema-footer">
             <div class="container-fluid px-lg-5 px-4">
                 <div class="row g-4 align-items-start">
-
+ 
                     <!-- Left Logo Area -->
                     <div class="col-lg-3 col-md-12 footer-brand-wrap">
                         <div class="footer-brand-title">Cinema Solution By</div>
-
+ 
                         <a href="#" class="text-decoration-none d-inline-block mb-3">
                             <img src="./img/logo cinema grill.png" alt="Cinema Logo" class="footer-logo-img">
                         </a>
-
+ 
                         <div class="address">
                             <h2 class="cinema-name">9ja Cinema Grill Ltd</h2>
-
+ 
                             <div class="cinema-address-wrap">
                                 <i class="bi bi-geo-alt-fill address-icon"></i>
                                 <h3 class="cinema-address">
@@ -1587,14 +2562,14 @@
                             </div>
                         </div>
                     </div>
-
+ 
                     <!-- Middle Newsletter Area -->
                     <div
                         class="col-lg-6 col-md-12 footer-newsletter-wrap d-flex flex-column align-items-center text-center">
                         <p class="newsletter-text">
                             Subscribe to our newsletter for fresh updates and special savings.
                         </p>
-
+ 
                         <form class="newsletter-form w-100">
                             <div class="row g-3 justify-content-center">
                                 <div class="col-md-6">
@@ -1611,22 +2586,22 @@
                                 </div>
                             </div>
                         </form>
-
+ 
                         <p class="mobile-text">Switch to our mobile experience</p>
-
+ 
                         <div class="d-flex flex-wrap gap-3 justify-content-center app-store-wrap">
                             <a href="#" class="store-img-link">
                                 <img src="./img/GetItOnGooglePlay_Badge_Web_color_English.png"
                                     alt="Get it on Google Play" class="store-badge">
                             </a>
-
+ 
                             <a href="#" class="store-img-link">
                                 <img src="/img/badge-example-preferred_2x.png" alt="Download on the App Store"
                                     class="store-badge">
                             </a>
                         </div>
                     </div>
-
+ 
                     <!-- Right Links -->
                     <div class="col-lg-3 col-md-4 footer-links-wrap">
                         <div class="row">
@@ -1639,7 +2614,7 @@
                                     <li><a href="#">Ticket sales</a></li>
                                 </ul>
                             </div>
-
+ 
                             <div class="col-6">
                                 <ul class="footer-link">
                                     <li><a href="#">Contact us</a></li>
@@ -1650,152 +2625,152 @@
                         </div>
                     </div>
                 </div>
-
+ 
                 <!-- Bottom copyright -->
                 <div class="copyright-bar">
                     © 2026 9ja Cinema Grill Ltd . All rights reserved.
                 </div>
             </div>
         </footer>
-
-
-
-
-
+ 
+ 
+ 
+ 
+ 
         <script>
             const menuToggle = document.getElementById("menuToggle");
             const navLinks = document.getElementById("navLinks");
-
+ 
             menuToggle.addEventListener("click", () => {
                 navLinks.classList.toggle("active");
             });
         </script>
-
-
+ 
+ 
         <script>
             function searchLocation() {
                 const location = document.getElementById("location").value;
-
+ 
                 if (location === "") {
                     alert("Please select a location");
                     return;
                 }
-
+ 
                 document.getElementById("result").innerHTML =
                     "You selected: " + location;
             }
         </script>
-
-
+ 
+ 
         <script>
             const slides = document.querySelectorAll(".slide");
             const next = document.querySelector(".next");
             const prev = document.querySelector(".prev");
-
+ 
             let index = 0;
-
+ 
             function showSlide(i) {
-
+ 
                 slides.forEach(slide => {
                     slide.classList.remove("active");
                 });
-
+ 
                 slides[i].classList.add("active");
             }
-
+ 
             next.addEventListener("click", () => {
-
+ 
                 index++;
-
+ 
                 if (index >= slides.length) {
                     index = 0;
                 }
-
+ 
                 showSlide(index);
-
+ 
             });
-
+ 
             prev.addEventListener("click", () => {
-
+ 
                 index--;
-
+ 
                 if (index < 0) {
                     index = slides.length - 1;
                 }
-
+ 
                 showSlide(index);
-
+ 
             });
-
+ 
             setInterval(() => {
-
+ 
                 index++;
-
+ 
                 if (index >= slides.length) {
                     index = 0;
                 }
-
+ 
                 showSlide(index);
-
+ 
             }, 10000);
         </script>
-
-
-
+ 
+ 
+ 
         <script>
-
+ 
             const carousel = document.getElementById("videoCarousel");
-
+ 
             function pauseAllVideos() {
                 document.querySelectorAll("#videoCarousel video").forEach(video => {
                     video.pause();
                     video.currentTime = 0;
                 });
             }
-
+ 
             function playCurrentVideo() {
                 const activeVideo = carousel.querySelector(".carousel-item.active video");
-
+ 
                 if (activeVideo) {
                     activeVideo.play().catch(() => { });
                 }
             }
-
+ 
             carousel.addEventListener("slide.bs.carousel", pauseAllVideos);
-
+ 
             carousel.addEventListener("slid.bs.carousel", playCurrentVideo);
-
+ 
             window.addEventListener("load", playCurrentVideo);
         </script>
-
-
+ 
+ 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
-
+ 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+ 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
+ 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
-
+ 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
-
-
+ 
+ 
+ 
+ 
         <!-- Trailer Modal -->
         <!-- Trailer Modal -->
         <div class="modal fade" id="trailerModal" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content bg-dark border-0 rounded-4 overflow-hidden">
-
+ 
                     <div class="modal-header border-0">
                         <h5 class="modal-title text-white fw-bold" id="trailerModalLabel">Movie Trailer</h5>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
                     </div>
-
+ 
                     <div class="modal-body">
                         <div class="trailer-video">
                             <iframe id="trailerFrame" src="" title="Movie Trailer"
@@ -1804,36 +2779,39 @@
                             </iframe>
                         </div>
                     </div>
-
+ 
                 </div>
             </div>
         </div>
-
-
+ 
+ 
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const trailerButtons = document.querySelectorAll(".play-trailer-btn");
                 const trailerFrame = document.getElementById("trailerFrame");
                 const trailerTitle = document.getElementById("trailerModalLabel");
                 const trailerModal = document.getElementById("trailerModal");
-
+ 
                 trailerButtons.forEach(button => {
                     button.addEventListener("click", function () {
                         const videoSrc = this.getAttribute("data-video");
                         const movieTitle = this.getAttribute("data-title") || "Movie Trailer";
-
+ 
                         trailerFrame.src = videoSrc;
                         trailerTitle.textContent = movieTitle;
                     });
                 });
-
+ 
                 trailerModal.addEventListener("hidden.bs.modal", function () {
                     trailerFrame.src = ""; // stop video when modal closes
                 });
             });
         </script>
-
-
+ 
+ 
 </body>
-
+ 
 </html>
+ 
+
+ 
